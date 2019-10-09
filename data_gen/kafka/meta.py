@@ -49,11 +49,12 @@ def get_form_meta(document):
     )
 
 
-def get_case_meta():
+def get_case_meta(document):
     # todo: other fields
     return ChangeMeta(
         document_id=uuid.uuid4().hex,
         data_source_type='sql',
         data_source_name='case-sql',
         document_type='CommCareCase',
+        document=document,
     )
