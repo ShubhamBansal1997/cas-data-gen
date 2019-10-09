@@ -8,6 +8,7 @@ def generate_data():
     producer = ChangeProducer('localhost:9092')
     producer.send_change(topics.FORM_TOPIC, get_form_meta())
     producer.send_change(topics.CASE_TOPIC, get_case_meta())
+    producer.producer.flush()
     print('done!')
 
 
