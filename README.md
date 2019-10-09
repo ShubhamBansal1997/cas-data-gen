@@ -14,5 +14,5 @@ pip install -r requirements.txt
 # Usage
 
 ```
-python data_gen.py
+python data_gen/main.py
 ```
