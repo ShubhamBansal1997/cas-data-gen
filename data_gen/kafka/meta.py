@@ -31,17 +31,21 @@ class ChangeMeta(jsonobject.JsonObject):
     is_deletion = jsonobject.BooleanProperty()
     publish_timestamp = jsonobject.DateTimeProperty(default=datetime.utcnow)
 
+    # note: this has been added and is different from commcarehq
+    document = jsonobject.DefaultProperty()
+
     # track of retry attempts
     attempts = jsonobject.IntegerProperty(default=0)
 
 
-def get_form_meta():
+def get_form_meta(document):
     # todo: other fields
     return ChangeMeta(
         document_id=uuid.uuid4().hex,
         data_source_type='sql',
         data_source_name='form-sql',
         document_type='XFormInstance',
+        document=document,
     )
 
 
