@@ -22,9 +22,10 @@ need to change it.
 # Usage
 
 ```
-python main.py
+python main.py [count]
 ```
 
+Where `count` is the number of items *of each type* (forms/cases) to generate.
 
 # Testing
 
