@@ -14,7 +14,7 @@ LOCATIONS_FILE = "locations.csv"
 CASE_LIST = []
 
 
-### Functions to get specific variables within forms
+### Functions to get specific variables within templates
 def get_nextUUID(randomObj):
     return str(uuid.UUID(int = randomObj.getrandbits(128)))
 
