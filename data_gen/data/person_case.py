@@ -12,8 +12,8 @@ def get_random_mother_case():
 
 def randomize_template_values(template_string, random_generator):
     formatted_case = template_string % {
-        'case_id': randomizers.get_nextUUID(random_generator),
-        'hh_case_id': randomizers.get_nextUUID(random_generator),
+        'case_id': randomizers.get_next_uuid(random_generator),
+        'hh_case_id': randomizers.get_next_uuid(random_generator),
         'name': randomizers.get_next_child_name(random_generator),
     }
     return json.loads(formatted_case)

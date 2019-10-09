@@ -15,7 +15,7 @@ CASE_LIST = []
 
 
 ### Functions to get specific variables within templates
-def get_nextUUID(randomObj):
+def get_next_uuid(randomObj):
     return str(uuid.UUID(int = randomObj.getrandbits(128)))
 
 def get_nextInt(randomObj):
@@ -35,7 +35,7 @@ def get_next_yes_no(randomObj):
 
 def get_next_child_id(randomObj):
     ## TO-DO: Fix this
-    return get_nextUUID(randomObj)
+    return get_next_uuid(randomObj)
 
 def get_next_datetime_modified(randomObj):
     delta_microseconds = (END_DATETIME - START_DATETIME).days * 24 * 60 * 60 * 1000000
@@ -59,7 +59,7 @@ def get_next_ip(randomObj):
 
 def get_next_child_name(randomObj):
     ## TO-DO: Fix this
-    return get_nextUUID(randomObj)
+    return get_next_uuid(randomObj)
 
 def get_next_wfa(randomObj):
     return round(randomObj.random() * 20 - 10, 4)
@@ -79,6 +79,6 @@ def get_next_location_dict(locationCycle):
 
 def get_random_location_dict(randomObj):
     return {
-        'location_id': get_nextUUID(randomObj),
+        'location_id': get_next_uuid(randomObj),
         'name': get_next_child_name(randomObj),
     }

@@ -37,11 +37,11 @@ def randomize_template_values(template_string, random_generator):
     username = location_dict["name"]
     owner_id = location_dict["location_id"]
     sex = randomizers.get_next_sex(random_generator)
-    form_id = randomizers.get_nextUUID(random_generator)
-    formXML_id = randomizers.get_nextUUID(random_generator)
+    form_id = randomizers.get_next_uuid(random_generator)
+    formXML_id = randomizers.get_next_uuid(random_generator)
     deviceID = randomizers.get_next_device_id(random_generator)
     child_name = randomizers.get_next_child_name(random_generator)
-    last_sync_token = randomizers.get_nextUUID(random_generator)
+    last_sync_token = randomizers.get_next_uuid(random_generator)
     submit_ip = randomizers.get_next_ip(random_generator)
 
     newForm = template_string % dict(
