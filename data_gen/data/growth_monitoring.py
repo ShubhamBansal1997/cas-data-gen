@@ -1,22 +1,14 @@
 import json
-import os
 import datetime
 import random
 
 from . import randomizers
+from .util import get_template
 
 
 def get_random_growth_monitoring_form():
-    template = get_growth_monitoring_form_template()
+    template = get_template('growth-monitoring-form.json')
     return randomize_template_values(template, random.Random("growth-monitoring"))
-
-
-def get_growth_monitoring_form_template():
-    template_filename = os.path.join(os.path.dirname(__file__), 'templates', 'growth-monitoring-form.json')
-    with open(template_filename, "r") as f:
-        template_string = f.read()
-
-    return template_string
 
 
 def randomize_template_values(template_string, random_generator):
