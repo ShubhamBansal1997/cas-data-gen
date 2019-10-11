@@ -29,7 +29,6 @@ def randomize_template_values(template_string, seed_values):
     age_months_rounded = int(age_months)
     age_dob = datetime.datetime.strftime(datetime_modified_datetime - datetime.timedelta(days = age_days),"%Y-%m-%d")
     yes_no = randomizers.get_next_yes_no(random_generator)
-    location_dict = seed_values.location
     sex = randomizers.get_next_sex(random_generator)
     form_id = randomizers.get_next_uuid(random_generator)
     formXML_id = randomizers.get_next_uuid(random_generator)
@@ -53,11 +52,11 @@ def randomize_template_values(template_string, seed_values):
         age_months_rounded=age_months_rounded,
         age_dob=age_dob,
         yes_no=yes_no,
-        owner_id=location_dict["center_id"],
+        owner_id=seed_values.location.get_owner_id(),
         sex=sex,
         form_id=form_id,
-        user_id=location_dict["center_id"],
-        username=location_dict["center_name"],
+        user_id=seed_values.location.get_user_id(),
+        username=seed_values.location.get_username(),
         formXML_id=formXML_id,
         datetime_modified=datetime_modified,
         date_modified=date_modified,

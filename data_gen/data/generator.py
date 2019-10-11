@@ -31,7 +31,7 @@ def generate_data(count):
 
 class DataGenerator:
 
-    def __init__(self, random_instance, location_dict):
+    def __init__(self, random_instance, location):
         self.random_instance = random_instance
         case_ids = CaseIds(
             household=get_next_uuid(self.random_instance),
@@ -40,11 +40,10 @@ class DataGenerator:
         )
         self.seed_values = SeedValues(
             random_instance=self.random_instance,
-            location=location_dict,
+            location=location,
             case_ids=case_ids
         )
 
     def get_data(self):
         yield DataUnit(topics.CASE_TOPIC, get_case_meta(get_random_mother_case(self.seed_values)))
         yield DataUnit(topics.FORM_TOPIC, get_form_meta(get_random_growth_monitoring_form(self.seed_values)))
-
