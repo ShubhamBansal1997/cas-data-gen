@@ -1,0 +1,36 @@
+{
+    "case_id": "%(child_health_case_id)s",
+    "case_json": {
+        "display_icon_z1": "grey",
+        "display_icon_z2": "grey",
+        "display_icon_z3": "grey",
+        "display_icon_z4": "grey"
+    },
+    "closed": false,
+    "closed_by": null,
+    "closed_on": null,
+    "deleted": false,
+    "domain": "icds-dashboard-qa",
+    "external_id": null,
+    "id": 8107582,
+    "indices": [
+        {
+            "case_id": "%(child_health_case_id)s",
+            "identifier": "parent",
+            "referenced_id": "%(child_person_case_id)s",
+            "referenced_type": "person",
+            "relationship": "extension"
+        }
+    ],
+    "location_id": null,
+    "modified_by": "%(user_id)s",
+    "modified_on": "2019-07-24T07:37:31.553000Z",
+    "name": "child_health",
+    "opened_by": "%(user_id)s",
+    "opened_on": "2019-07-24T07:37:31.553000Z",
+    "owner_id": "%(owner_id)s",
+    "server_modified_on": "2019-07-24T07:37:38.350510Z",
+    "transactions": [
+    ],
+    "type": "child_health"
+}
