@@ -14,10 +14,7 @@ from .util import DataUnit, SeedValues, CaseIds
 
 def generate_data(count):
     print('generating {} items!'.format(count))
-
-
     producer = ChangeProducer('localhost:9092')
-
     locations = get_all_locations()
     random_instance = random.Random("cas-data-generator-{}".format(count))
     for i in range(count):
