@@ -1,29 +1,30 @@
 {
     "case_id": "%(hh_case_id)s",
     "case_json": {
-        "hh_bpl_apl": "unknown",
-        "hh_caste": "sc",
-        "hh_gps_location": "28.5665983 77.1566815 197.9 22.16",
-        "hh_minority": "yes",
-        "hh_reg_date": "2019-08-28",
-        "hh_religion": "sikh"
+        "hh_bpl_apl": "bpl",
+        "hh_caste": "st",
+        "hh_gps_location": "30.7264254 76.8421945 314.0 23.54",
+        "hh_minority": "no",
+        "hh_reg_date": "2019-07-24",
+        "hh_religion": "hindu"
     },
     "closed": false,
     "closed_by": null,
     "closed_on": null,
     "deleted": false,
-    "domain": "icds-cas",
+    "domain": "icds-dashboard-qa",
     "external_id": null,
-    "id": 8109462,
+    "id": 8108949,
     "indices": [],
     "location_id": null,
     "modified_by": "%(user_id)s",
-    "modified_on": "2020-01-14T09:55:07.097000Z",
-    "name": "due for delivery tests",
+    "modified_on": "2019-07-25T10:26:08.865000Z",
+    "name": "hh1",
     "opened_by": "%(user_id)s",
-    "opened_on": "2019-08-28T06:52:23.871000Z",
+    "opened_on": "2019-07-24T07:37:31.553000Z",
     "owner_id": "%(owner_id)s",
-    "server_modified_on": "2019-08-28T14:54:05.052301Z",
-    "transactions": [],
+    "server_modified_on": "2019-07-25T10:26:10.713913Z",
+    "transactions": [
+    ],
     "type": "household"
 }
