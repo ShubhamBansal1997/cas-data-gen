@@ -4,7 +4,8 @@ from collections import namedtuple
 
 
 DataUnit = namedtuple('DataUnit', ['topic', 'data'])
-SeedValues = namedtuple('SeedValues', ['location'])
+SeedValues = namedtuple('SeedValues', ['random_instance', 'location', 'case_ids'])
+CaseIds = namedtuple('CaseIds', ['household', 'mother_person'])
 
 
 def get_template(template_name):
