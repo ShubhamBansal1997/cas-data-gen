@@ -1,15 +1,14 @@
 import random
-from collections import namedtuple
 
-from data_gen.data.locations import get_all_locations
-from .growth_monitoring import get_random_growth_monitoring_form
-from .person_case import get_random_mother_case
-from data_gen.kafka.meta import get_form_meta, get_case_meta
+from ..kafka.meta import get_form_meta, get_case_meta
 from ..kafka import topics
 from ..kafka.producer import ChangeProducer
 
+from .locations import get_all_locations
+from .growth_monitoring import get_random_growth_monitoring_form
+from .person_case import get_random_mother_case
+from .util import DataUnit, SeedValues
 
-DataUnit = namedtuple('DataUnit', ['topic', 'data'])
 
 def generate_data(count):
     print('generating {} items!'.format(count))
@@ -32,8 +31,8 @@ def generate_data(count):
 class DataGenerator:
 
     def __init__(self, location_dict):
-        self.location_dict = location_dict
+        self.seed_values = SeedValues(location_dict)
 
     def get_data(self):
-        yield DataUnit(topics.FORM_TOPIC, get_form_meta(get_random_growth_monitoring_form()))
-        yield DataUnit(topics.CASE_TOPIC, get_case_meta(get_random_mother_case()))
+        yield DataUnit(topics.FORM_TOPIC, get_form_meta(get_random_growth_monitoring_form(self.seed_values)))
+        yield DataUnit(topics.CASE_TOPIC, get_case_meta(get_random_mother_case(self.seed_values)))

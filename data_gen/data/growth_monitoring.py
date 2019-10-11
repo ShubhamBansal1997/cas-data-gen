@@ -6,7 +6,7 @@ from . import randomizers
 from .util import get_template
 
 
-def get_random_growth_monitoring_form():
+def get_random_growth_monitoring_form(seed_values):
     template = get_template('growth-monitoring-form.json')
     return randomize_template_values(template, random.Random("growth-monitoring"))
 

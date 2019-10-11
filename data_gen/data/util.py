@@ -1,5 +1,10 @@
 import csv
 import os
+from collections import namedtuple
+
+
+DataUnit = namedtuple('DataUnit', ['topic', 'data'])
+SeedValues = namedtuple('SeedValues', ['location'])
 
 
 def get_template(template_name):
