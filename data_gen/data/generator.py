@@ -36,6 +36,7 @@ class DataGenerator:
         case_ids = CaseIds(
             household=get_next_uuid(self.random_instance),
             mother_person=get_next_uuid(self.random_instance),
+            child_person=get_next_uuid(self.random_instance),
         )
         self.seed_values = SeedValues(
             random_instance=self.random_instance,

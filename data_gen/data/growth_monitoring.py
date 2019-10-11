@@ -1,6 +1,5 @@
 import json
 import datetime
-import random
 
 from . import randomizers
 from .util import get_template
@@ -8,13 +7,13 @@ from .util import get_template
 
 def get_random_growth_monitoring_form(seed_values):
     template = get_template('growth-monitoring-form.json')
-    return randomize_template_values(template, random.Random("growth-monitoring"))
+    return randomize_template_values(template, seed_values)
 
 
-def randomize_template_values(template_string, random_generator):
+def randomize_template_values(template_string, seed_values):
+    random_generator = seed_values.random_instance
     wfa = randomizers.get_next_wfa(random_generator)
     wfa_pos = abs(wfa)
-    child_id = randomizers.get_next_child_id(random_generator)
     weight = randomizers.get_nextInt(random_generator)
     zscore = randomizers.get_next_zscore(random_generator)
     zscore_wfa = zscore * 3
@@ -30,12 +29,7 @@ def randomize_template_values(template_string, random_generator):
     age_months_rounded = int(age_months)
     age_dob = datetime.datetime.strftime(datetime_modified_datetime - datetime.timedelta(days = age_days),"%Y-%m-%d")
     yes_no = randomizers.get_next_yes_no(random_generator)
-    # todo: add real location logic back
-    # location_dict = randomizers.get_next_location_dict(locationCycle)
-    location_dict = randomizers.get_random_location_dict(random_generator)
-    user_id = location_dict["location_id"]
-    username = location_dict["name"]
-    owner_id = location_dict["location_id"]
+    location_dict = seed_values.location
     sex = randomizers.get_next_sex(random_generator)
     form_id = randomizers.get_next_uuid(random_generator)
     formXML_id = randomizers.get_next_uuid(random_generator)
@@ -46,7 +40,7 @@ def randomize_template_values(template_string, random_generator):
 
     newForm = template_string % dict(
         wfa=wfa,
-        child_id=child_id,
+        child_id=seed_values.case_ids.child_person,
         weight=weight,
         zscore=zscore,
         zscore_wfa=zscore_wfa,
@@ -59,11 +53,11 @@ def randomize_template_values(template_string, random_generator):
         age_months_rounded=age_months_rounded,
         age_dob=age_dob,
         yes_no=yes_no,
-        owner_id=owner_id,
+        owner_id=location_dict["center_id"],
         sex=sex,
         form_id=form_id,
-        user_id=user_id,
-        username=username,
+        user_id=location_dict["center_id"],
+        username=location_dict["center_name"],
         formXML_id=formXML_id,
         datetime_modified=datetime_modified,
         date_modified=date_modified,
