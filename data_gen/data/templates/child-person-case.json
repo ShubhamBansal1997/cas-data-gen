@@ -1,0 +1,68 @@
+{
+    "case_id": "%(child_person_case_id)s",
+    "case_json": {
+        "aadhar_date": "",
+        "aadhar_number": "",
+        "aadhar_present": "no",
+        "age_at_reg": "0",
+        "age_marriage": "",
+        "contact_phone_number": "",
+        "contact_phone_number_is_verified": "",
+        "disability_type": "",
+        "disabled": "no",
+        "dob": "2018-11-22",
+        "dob_known": "no",
+        "father_name": "dad",
+        "has_aadhar": "no",
+        "has_mcts": "",
+        "has_mobile": "",
+        "has_rch": "",
+        "hh_member_number": "2",
+        "husband_name": "",
+        "language_code": "hin",
+        "marital_status": "",
+        "mcts_id": "",
+        "migration_status": "migrated",
+        "mother_name": "female2",
+        "phone_number": "",
+        "raw_aadhar_string": "",
+        "rch_id": "",
+        "resident": "yes",
+        "sex": "M",
+        "time_zone": "Asia/Kolkata"
+    },
+    "closed": false,
+    "closed_by": null,
+    "closed_on": null,
+    "deleted": false,
+    "domain": "icds-dashboard-qa",
+    "external_id": null,
+    "id": 8108950,
+    "indices": [
+        {
+            "case_id": "%(child_person_case_id)s",
+            "identifier": "mother",
+            "referenced_id": "%(mother_person_case_id)s",
+            "referenced_type": "person",
+            "relationship": "child"
+        },
+        {
+            "case_id": "%(child_person_case_id)s",
+            "identifier": "parent",
+            "referenced_id": "%(household_case_id)s",
+            "referenced_type": "household",
+            "relationship": "child"
+        }
+    ],
+    "location_id": null,
+    "modified_by": "%(user_id)s",
+    "modified_on": "2019-07-24T10:20:34.628000Z",
+    "name": "child1",
+    "opened_by": "%(user_id)s",
+    "opened_on": "2019-07-24T07:37:31.553000Z",
+    "owner_id": "%(owner_id)s",
+    "server_modified_on": "2019-07-24T10:20:35.406678Z",
+    "transactions": [
+    ],
+    "type": "person"
+}

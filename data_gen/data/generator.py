@@ -8,7 +8,7 @@ from .locations import get_all_locations
 from .growth_monitoring import get_random_growth_monitoring_form
 from .household_case import get_random_household_case
 from .randomizers import get_next_uuid
-from .person_case import get_random_mother_case
+from .person_case import get_random_mother_case, get_random_child_case
 from .util import DataUnit, SeedValues, CaseIds
 
 
@@ -45,6 +45,7 @@ class DataGenerator:
     def get_data(self):
         yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_household_case()))
         yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_mother_case()))
+        yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_child_case()))
         yield DataUnit(topics.FORM_TOPIC, get_form_meta(self.get_growth_monitoring_form()))
 
 
@@ -53,6 +54,9 @@ class DataGenerator:
 
     def get_mother_case(self):
         return get_random_mother_case(self.seed_values)
+
+    def get_child_case(self):
+        return get_random_child_case(self.seed_values)
 
     def get_growth_monitoring_form(self):
         return get_random_growth_monitoring_form(self.seed_values)
