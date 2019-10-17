@@ -40,6 +40,6 @@ kafka-console-consumer.sh --topic datagen-case --bootstrap-server http://localho
 
 The household case with ID `0d3ebba1-cf52-4d89-aea4-2fe5ec9c9ed9` on the India server has been used as a basis 
 for the case templates (including its child cases, etc.). 
-You can [view the case here](https://india.commcarehq.org/a/icds-cas/reports/case_data/0d3ebba1-cf52-4d89-aea4-2fe5ec9c9ed9/#related)
+You can [view the case here](https://india.commcarehq.org/a/icds-dashboard-qa/reports/case_data/0d3ebba1-cf52-4d89-aea4-2fe5ec9c9ed9/#related)
 and use the [raw doc view](https://india.commcarehq.org/hq/admin/raw_doc/?id=0d3ebba1-cf52-4d89-aea4-2fe5ec9c9ed9)
 to see the raw JSON.
