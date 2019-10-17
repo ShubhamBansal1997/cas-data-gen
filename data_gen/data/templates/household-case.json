@@ -1,5 +1,5 @@
 {
-    "case_id": "%(hh_case_id)s",
+    "case_id": "%(household_case_id)s",
     "case_json": {
         "hh_bpl_apl": "bpl",
         "hh_caste": "st",
