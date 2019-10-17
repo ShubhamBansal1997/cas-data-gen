@@ -41,10 +41,11 @@ class ChangeMeta(jsonobject.JsonObject):
 def get_form_meta(document):
     # todo: other fields
     return ChangeMeta(
-        document_id=uuid.uuid4().hex,
+        document_id=document['_id'],
         data_source_type='sql',
         data_source_name='form-sql',
         document_type='XFormInstance',
+        document_subtype=document['xmlns'],
         document=document,
     )
 
@@ -52,9 +53,10 @@ def get_form_meta(document):
 def get_case_meta(document):
     # todo: other fields
     return ChangeMeta(
-        document_id=uuid.uuid4().hex,
+        document_id=document['case_id'],
         data_source_type='sql',
         data_source_name='case-sql',
         document_type='CommCareCase',
+        document_subtype=document['type'],
         document=document,
     )
