@@ -1,0 +1,38 @@
+{
+    "case_id": "%(ccs_record_case_id)s",
+    "case_json": {
+        "add": "2018-11-22",
+        "ccs_opened_date": "2019-07-24",
+        "child_name": "child1",
+        "current_schedule_phase": "2",
+        "has_mcts": "",
+        "mcts_id": ""
+    },
+    "closed": false,
+    "closed_by": null,
+    "closed_on": null,
+    "deleted": false,
+    "domain": "icds-dashboard-qa",
+    "external_id": null,
+    "id": 8072236,
+    "indices": [
+        {
+            "case_id": "%(ccs_record_case_id)s",
+            "identifier": "parent",
+            "referenced_id": "%(mother_person_case_id)s",
+            "referenced_type": "person",
+            "relationship": "child"
+        }
+    ],
+    "location_id": null,
+    "modified_by": "%(user_id)s",
+    "modified_on": "2019-07-24T07:37:31.553000Z",
+    "name": "ccs_record",
+    "opened_by": "%(user_id)s",
+    "opened_on": "2019-07-24T07:37:31.553000Z",
+    "owner_id": "%(owner_id)s",
+    "server_modified_on": "2019-07-24T07:37:38.350510Z",
+    "transactions": [
+    ],
+    "type": "ccs_record"
+}

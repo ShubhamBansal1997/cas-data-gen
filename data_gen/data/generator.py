@@ -1,5 +1,6 @@
 import random
 
+from data_gen.data.ccs_record_case import get_random_ccs_record_case
 from ..kafka.meta import get_form_meta, get_case_meta
 from ..kafka import topics
 from ..kafka.producer import ChangeProducer
@@ -37,6 +38,7 @@ class DataGenerator:
             mother_person=get_next_uuid(self.random_instance),
             child_person=get_next_uuid(self.random_instance),
             child_health=get_next_uuid(self.random_instance),
+            ccs_record=get_next_uuid(self.random_instance),
         )
         self.seed_values = SeedValues(
             random_instance=self.random_instance,
@@ -47,6 +49,7 @@ class DataGenerator:
     def get_data(self):
         yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_household_case()))
         yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_mother_case()))
+        yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_ccs_record_case()))
         yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_child_case()))
         yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_child_health_case()))
         yield DataUnit(topics.FORM_TOPIC, get_form_meta(self.get_growth_monitoring_form()))
@@ -58,6 +61,9 @@ class DataGenerator:
     def get_mother_case(self):
         return get_random_mother_case(self.seed_values)
 
+    def get_ccs_record_case(self):
+        return get_random_ccs_record_case(self.seed_values)
+
     def get_child_case(self):
         return get_random_child_case(self.seed_values)
 
@@ -66,3 +72,4 @@ class DataGenerator:
 
     def get_growth_monitoring_form(self):
         return get_random_growth_monitoring_form(self.seed_values)
+
