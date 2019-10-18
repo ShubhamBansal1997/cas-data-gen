@@ -86,9 +86,9 @@ def get_random_location_dict(randomObj):
 
 def get_next_phone_number(random_instance):
     """
-    Returns a phone number like: +91XXXXNNNNNN or an empty string with 20% probability
+    Returns a phone number like: +91XXXXNNNNNN or an empty string with 5% probability
     """
-    if random_instance.random() > .8:
+    if random_instance.random() > .95:
         return f'+91{random_instance.randint(1000000000, 9999999999)}'
     else:
         return ''
