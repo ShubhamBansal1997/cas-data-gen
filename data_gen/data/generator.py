@@ -1,10 +1,10 @@
 import random
 
-from data_gen.data.ccs_record_case import get_random_ccs_record_case
 from ..kafka.meta import get_form_meta, get_case_meta
 from ..kafka import topics
 from ..kafka.producer import ChangeProducer
 
+from .ccs_record_case import get_random_ccs_record_case
 from .child_health_case import get_random_child_health_case
 from .growth_monitoring import get_random_growth_monitoring_form
 from .household_case import get_random_household_case
@@ -53,7 +53,6 @@ class DataGenerator:
         yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_child_case()))
         yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_child_health_case()))
         yield DataUnit(topics.FORM_TOPIC, get_form_meta(self.get_growth_monitoring_form()))
-
 
     def get_household_case(self):
         return get_random_household_case(self.seed_values)
