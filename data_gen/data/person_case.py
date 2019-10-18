@@ -17,6 +17,7 @@ def get_random_child_case(seed_values):
 def randomize_template_values(template_string, seed_values):
     context = {
         'name': randomizers.get_next_child_name(seed_values.random_instance),
+        'mother_phone_number': randomizers.get_next_phone_number(seed_values.random_instance),
     }
     context.update(seed_values.get_context())
     formatted_case = template_string % context

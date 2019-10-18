@@ -82,3 +82,13 @@ def get_random_location_dict(randomObj):
         'location_id': get_next_uuid(randomObj),
         'name': get_next_child_name(randomObj),
     }
+
+
+def get_next_phone_number(random_instance):
+    """
+    Returns a phone number like: +91XXXXNNNNNN or an empty string with 20% probability
+    """
+    if random_instance.random() > .8:
+        return f'+91{random_instance.randint(1000000000, 9999999999)}'
+    else:
+        return ''

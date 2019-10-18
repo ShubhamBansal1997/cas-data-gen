@@ -6,7 +6,7 @@
         "aadhar_present": "no",
         "age_at_reg": "27",
         "age_marriage": "",
-        "contact_phone_number": "",
+        "contact_phone_number": "%(mother_phone_number)s",
         "contact_phone_number_is_verified": "",
         "disability_type": "1",
         "disabled": "yes",
