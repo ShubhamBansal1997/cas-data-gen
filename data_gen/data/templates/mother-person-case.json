@@ -18,7 +18,7 @@
         "has_mobile": "no",
         "has_rch": "",
         "hh_member_number": "1",
-        "husband_name": "",
+        "husband_name": "%(husband_name)s",
         "language_code": "hin",
         "marital_status": "other",
         "mcts_id": "",
