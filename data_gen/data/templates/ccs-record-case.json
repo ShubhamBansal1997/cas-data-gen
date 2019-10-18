@@ -3,7 +3,7 @@
     "case_json": {
         "add": "2018-11-22",
         "ccs_opened_date": "2019-07-24",
-        "child_name": "child1",
+        "child_name": "%(child_name)s",
         "current_schedule_phase": "2",
         "has_mcts": "",
         "mcts_id": ""

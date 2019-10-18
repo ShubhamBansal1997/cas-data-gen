@@ -9,5 +9,5 @@ def get_random_household_case(seed_values):
 
 
 def randomize_template_values(template_string, seed_values):
-    formatted_case = template_string % seed_values.get_context()
+    formatted_case = template_string % seed_values.context
     return json.loads(formatted_case)

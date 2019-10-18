@@ -49,7 +49,7 @@
     "location_id": null,
     "modified_by": "%(user_id)s",
     "modified_on": "2019-08-28T09:35:17.085000Z",
-    "name": "%(name)s",
+    "name": "%(mother_name)s",
     "opened_by": "%(user_id)s",
     "opened_on": "2019-08-28T06:52:23.871000Z",
     "owner_id": "%(owner_id)s",
