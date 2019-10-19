@@ -36,6 +36,14 @@ kafka-console-consumer.sh --topic datagen-form --bootstrap-server http://localho
 kafka-console-consumer.sh --topic datagen-case --bootstrap-server http://localhost:9092 --from-beginning
 ```
 
+## Running tests
+
+To run tests just run the following in the root of the repository:
+
+```python
+pytest
+```
+
 ## Source Data
 
 The household case with ID `0d3ebba1-cf52-4d89-aea4-2fe5ec9c9ed9` on the India server has been used as a basis 
