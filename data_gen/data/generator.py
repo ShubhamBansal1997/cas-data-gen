@@ -18,7 +18,8 @@ def generate_data(count):
     print('generating {} items!'.format(count))
     producer = ChangeProducer('localhost:9092')
     locations = get_all_locations()
-    random_instance = random.Random("cas-data-generator-{}".format(count))
+    # random_instance = random.Random("cas-data-generator-{}".format(count))
+    random_instance = random.Random()
     for i in range(count):
         location = random_instance.choice(locations)
         data_generator = DataGenerator(random_instance, location)
