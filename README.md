@@ -40,7 +40,7 @@ kafka-console-consumer.sh --topic datagen-case --bootstrap-server http://localho
 
 To run tests just run the following in the root of the repository:
 
-```python
+```
 pytest
 ```
 
