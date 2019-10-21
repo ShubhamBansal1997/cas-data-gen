@@ -4,7 +4,7 @@ from ..kafka.meta import get_form_meta, get_case_meta
 from ..kafka import topics
 from ..kafka.producer import ChangeProducer
 
-from .ccs_record_case import get_random_ccs_record_case
+from .ccs_record_case import get_random_mother_ccs_record_case
 from .child_health_case import get_random_child_health_case
 from .growth_monitoring import get_random_growth_monitoring_form
 from .household_case import get_random_household_case
@@ -62,7 +62,7 @@ class DataGenerator:
         return get_random_mother_case(self.seed_values)
 
     def get_ccs_record_case(self):
-        return get_random_ccs_record_case(self.seed_values)
+        return get_random_mother_ccs_record_case(self.seed_values)
 
     def get_child_case(self):
         return get_random_child_case(self.seed_values)
