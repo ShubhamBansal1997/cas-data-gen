@@ -1,0 +1,46 @@
+{
+    "case_id": "%(preg_ccs_record_case_id)s",
+    "case_json": {
+        "bank_account_number": "",
+        "bank_branch_name": "",
+        "bank_ifsc_code": "",
+        "bank_name": "",
+        "ccs_opened_date": "2019-07-24",
+        "edd": "%(edd)s",
+        "has_bank_account": "no",
+        "has_mcts": "",
+        "has_mobile": "no",
+        "lmp": "2018-11-22",
+        "mcp_id": "-2",
+        "mother_alive": "yes",
+        "preg_order": "1",
+        "raw_aadhar_string": ""
+    },
+    "closed": false,
+    "closed_by": null,
+    "closed_on": null,
+    "deleted": false,
+    "domain": "icds-dashboard-qa",
+    "external_id": null,
+    "id": 8110338,
+    "indices": [
+        {
+            "case_id": "%(preg_ccs_record_case_id)s",
+            "identifier": "parent",
+            "referenced_id": "%(mother_person_case_id)s",
+            "referenced_type": "person",
+            "relationship": "child"
+        }
+    ],
+    "location_id": null,
+    "modified_by": "%(user_id)s",
+    "modified_on": "2019-07-24T13:16:51.319000Z",
+    "name": "ccs_record",
+    "opened_by": "%(user_id)s",
+    "opened_on": "2019-07-24T13:16:51.319000Z",
+    "owner_id": "%(owner_id)s",
+    "server_modified_on": "2019-07-24T13:16:52.372824Z",
+    "transactions": [
+    ],
+    "type": "ccs_record"
+}

@@ -4,6 +4,11 @@ from data_gen.data import randomizers
 from data_gen.data.util import get_template
 
 
+def get_random_pregnant_case(seed_values):
+    template = get_template('preg-woman-person-case.json')
+    return randomize_template_values(template, seed_values)
+
+
 def get_random_mother_case(seed_values):
     template = get_template('mother-person-case.json')
     return randomize_template_values(template, seed_values)

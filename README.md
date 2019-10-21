@@ -56,7 +56,9 @@ The following table is the list of Case IDs used:
 
 Description         | Case Type  | Case ID
 ------------------- | ---------- | -------
-Household           | household  | [0d3ebba1-cf52-4d89-aea4-2fe5ec9c9ed9](https://india.commcarehq.org/hq/admin/raw_doc/?id=0d3ebba1-cf52-4d89-aea4-2fe5ec9c9ed9)
+Household           | household  | [0d3ebba1-cf52-4d89-aea4-2fe5ec9c9ed9](https://india.commcarehq.org/a/icds-dashboard-qa/reports/case_data/0d3ebba1-cf52-4d89-aea4-2fe5ec9c9ed9/#related)
+Pregnant Person     | person     | [7802432e-548d-499c-90cc-5b0b41f203f0](https://india.commcarehq.org/a/icds-dashboard-qa/reports/case_data/7802432e-548d-499c-90cc-5b0b41f203f0/)
+Pregnant CCS Record | ccs_record | [d02668b4-0175-4fe7-920d-c0ea3568d6b3](https://india.commcarehq.org/a/icds-dashboard-qa/reports/case_data/d02668b4-0175-4fe7-920d-c0ea3568d6b3/)
 Mother's Person     | person     | [23eb689a-8997-471f-946e-db06355296a6](https://india.commcarehq.org/a/icds-dashboard-qa/reports/case_data/23eb689a-8997-471f-946e-db06355296a6/)
 Child's Person      | person     | [51407edd-6c91-421f-9558-2f517fc359ae](https://india.commcarehq.org/a/icds-dashboard-qa/reports/case_data/51407edd-6c91-421f-9558-2f517fc359ae/)
 Mother's CCS Record | ccs_record | [d8962f84-6327-41bd-8572-076c621f7eae](https://india.commcarehq.org/a/icds-dashboard-qa/reports/case_data/d8962f84-6327-41bd-8572-076c621f7eae/)

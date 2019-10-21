@@ -8,7 +8,8 @@ from . import randomizers
 
 DataUnit = namedtuple('DataUnit', ['topic', 'data'])
 CaseIds = namedtuple('CaseIds', [
-    'household', 'mother_person', 'pregnant_person', 'child_person', 'child_health', 'ccs_record'
+    'household', 'mother_person', 'pregnant_person', 'child_person', 'child_health',
+    'pregnant_ccs_record', 'ccs_record',
 ])
 
 class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_ids'])):
@@ -27,15 +28,19 @@ class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_
                 'household_case_id': self.case_ids.household,
                 'mother_person_case_id': self.case_ids.mother_person,
                 'child_person_case_id': self.case_ids.child_person,
+                'pregnant_person_case_id': self.case_ids.pregnant_person,
                 'ccs_record_case_id': self.case_ids.ccs_record,
+                'pregnant_ccs_record_case_id': self.case_ids.pregnant_ccs_record,
                 'child_health_case_id': self.case_ids.child_health,
                 'user_id': self.location.get_user_id(),
                 'owner_id': self.location.get_owner_id(),
+                'pregnant_name': self.fake.name_female(),
                 'mother_name': self.fake.name_female(),
                 'child_name': self.fake.name(),
                 'husband_name': self.fake.name_male(),
                 'mother_phone_number': randomizers.get_next_phone_number(self.random_instance),
                 'add': randomizers.get_next_date(self.random_instance).strftime(randomizers.DATE_FORMAT_STRING),
+                'edd': randomizers.get_next_date(self.random_instance).strftime(randomizers.DATE_FORMAT_STRING),
             }
         return self._context
 
