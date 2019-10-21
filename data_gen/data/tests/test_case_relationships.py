@@ -1,23 +1,17 @@
-import random
-from unittest import TestCase
 
-from ..generator import DataGenerator
-from ..locations import get_all_locations
+from .base import DataGenTestBase
 
 
-class TestCaseRelationships(TestCase):
+class TestCaseRelationships(DataGenTestBase):
 
     def test_basic(self):
-        random_instance = random.Random('unit-tests')
-        locations = get_all_locations()
-        location = random_instance.choice(locations)
-        data_generator = DataGenerator(random_instance, location)
-
+        data_generator = self.get_next_data_generator()
         hh_case = data_generator.get_household_case()
         mother_case = data_generator.get_mother_case()
         ccs_record_case = data_generator.get_ccs_record_case()
         child_case = data_generator.get_child_case()
         child_health_case = data_generator.get_child_health_case()
+
         # mother case parent is household
         self.assertEqual(hh_case['case_id'], mother_case['indices'][0]['referenced_id'])
         self.assertEqual('parent', mother_case['indices'][0]['identifier'])
