@@ -33,6 +33,7 @@ class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_
                 'child_name': self.fake.name(),
                 'husband_name': self.fake.name_male(),
                 'mother_phone_number': randomizers.get_next_phone_number(self.random_instance),
+                'add': randomizers.get_next_date(self.random_instance).strftime(randomizers.DATE_FORMAT_STRING),
             }
         return self._context
 

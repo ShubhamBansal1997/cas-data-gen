@@ -6,6 +6,7 @@ import uuid
 RANDOM_EXAMPLE = random.Random("a")
 RANDOM_FORM1 = random.Random("form1")
 RANDOM_FORM2 = random.Random("form2")
+DATE_FORMAT_STRING = '%Y-%m-%d'
 ACTIVITY_LIST = ["prayer_hygiene", "conversation", "cognitive", "physical_outdoor", "arts_crafts", "language", "packup"]
 MEAL_SERVED_LIST = ["cooked_served_hot", "cooked_served_cold", "packed_served_hot", "packed_served_cold", "not_served"]
 START_DATETIME = datetime.datetime.strptime("2018-07-01","%Y-%m-%d")
@@ -41,6 +42,9 @@ def get_next_datetime_modified(randomObj):
     delta_microseconds = (END_DATETIME - START_DATETIME).days * 24 * 60 * 60 * 1000000
     randomObj.random()
     return START_DATETIME + datetime.timedelta(microseconds=randomObj.random()*delta_microseconds)
+
+def get_next_date(randomObj):
+    return get_next_datetime_modified(randomObj)
 
 def get_next_gps_location(randomObj):
     latitude = str(int(randomObj.random() * 180) - 90)
