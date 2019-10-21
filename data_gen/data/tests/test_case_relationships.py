@@ -8,7 +8,7 @@ class TestCaseRelationships(DataGenTestBase):
         data_generator = self.get_next_data_generator()
         hh_case = data_generator.get_household_case()
         mother_case = data_generator.get_mother_case()
-        ccs_record_case = data_generator.get_ccs_record_case()
+        ccs_record_case = data_generator.get_mother_ccs_record_case()
         child_case = data_generator.get_child_case()
         child_health_case = data_generator.get_child_health_case()
 

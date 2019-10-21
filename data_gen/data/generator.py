@@ -34,9 +34,12 @@ class DataGenerator:
 
     def __init__(self, random_instance, location):
         self.random_instance = random_instance
+        # one in four should be pregnant, the rest should be mothers
+        self.is_pregnant = random_instance.random() > .75
         case_ids = CaseIds(
             household=get_next_uuid(self.random_instance),
             mother_person=get_next_uuid(self.random_instance),
+            pregnant_person=get_next_uuid(self.random_instance),
             child_person=get_next_uuid(self.random_instance),
             child_health=get_next_uuid(self.random_instance),
             ccs_record=get_next_uuid(self.random_instance),
@@ -49,10 +52,11 @@ class DataGenerator:
 
     def get_data(self):
         yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_household_case()))
-        yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_mother_case()))
-        yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_ccs_record_case()))
-        yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_child_case()))
-        yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_child_health_case()))
+        if not self.is_pregnant:
+            yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_mother_case()))
+            yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_mother_ccs_record_case()))
+            yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_child_case()))
+            yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_child_health_case()))
         yield DataUnit(topics.FORM_TOPIC, get_form_meta(self.get_growth_monitoring_form()))
 
     def get_household_case(self):
@@ -61,7 +65,7 @@ class DataGenerator:
     def get_mother_case(self):
         return get_random_mother_case(self.seed_values)
 
-    def get_ccs_record_case(self):
+    def get_mother_ccs_record_case(self):
         return get_random_mother_ccs_record_case(self.seed_values)
 
     def get_child_case(self):

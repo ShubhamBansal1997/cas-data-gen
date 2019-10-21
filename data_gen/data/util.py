@@ -7,7 +7,9 @@ from faker import Faker
 from . import randomizers
 
 DataUnit = namedtuple('DataUnit', ['topic', 'data'])
-CaseIds = namedtuple('CaseIds', ['household', 'mother_person', 'child_person', 'child_health', 'ccs_record'])
+CaseIds = namedtuple('CaseIds', [
+    'household', 'mother_person', 'pregnant_person', 'child_person', 'child_health', 'ccs_record'
+])
 
 class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_ids'])):
 
