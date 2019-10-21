@@ -9,8 +9,8 @@ RANDOM_FORM2 = random.Random("form2")
 DATE_FORMAT_STRING = '%Y-%m-%d'
 ACTIVITY_LIST = ["prayer_hygiene", "conversation", "cognitive", "physical_outdoor", "arts_crafts", "language", "packup"]
 MEAL_SERVED_LIST = ["cooked_served_hot", "cooked_served_cold", "packed_served_hot", "packed_served_cold", "not_served"]
-START_DATETIME = datetime.datetime.strptime("2018-07-01","%Y-%m-%d")
-END_DATETIME = datetime.datetime.strptime("2019-07-01","%Y-%m-%d")
+START_DATETIME = datetime.datetime(2018, 7, 1)
+END_DATETIME = datetime.datetime(2019, 7, 1)
 LOCATIONS_FILE = "locations.csv"
 CASE_LIST = []
 
