@@ -1,5 +1,5 @@
 {
-    "case_id": "%(preg_ccs_record_case_id)s",
+    "case_id": "%(pregnant_ccs_record_case_id)s",
     "case_json": {
         "bank_account_number": "",
         "bank_branch_name": "",
@@ -25,7 +25,7 @@
     "id": 8110338,
     "indices": [
         {
-            "case_id": "%(preg_ccs_record_case_id)s",
+            "case_id": "%(pregnant_ccs_record_case_id)s",
             "identifier": "parent",
             "referenced_id": "%(mother_person_case_id)s",
             "referenced_type": "person",

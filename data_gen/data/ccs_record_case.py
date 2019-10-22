@@ -9,7 +9,7 @@ def get_random_mother_ccs_record_case(seed_values):
 
 
 def get_random_pregnant_ccs_record_case(seed_values):
-    template = get_template('ccs-record-case.json')
+    template = get_template('preg-ccs-record-case.json')
     return randomize_template_values(template, seed_values)
 
 
