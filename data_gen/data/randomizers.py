@@ -38,13 +38,20 @@ def get_next_child_id(randomObj):
     ## TO-DO: Fix this
     return get_next_uuid(randomObj)
 
-def get_next_datetime_modified(randomObj):
-    delta_microseconds = (END_DATETIME - START_DATETIME).days * 24 * 60 * 60 * 1000000
+def get_next_datetime_modified(randomObj, start=START_DATETIME, end=END_DATETIME):
+    delta_microseconds = (end - start).days * 24 * 60 * 60 * 1000000
     randomObj.random()
-    return START_DATETIME + datetime.timedelta(microseconds=randomObj.random()*delta_microseconds)
+    return start + datetime.timedelta(microseconds=randomObj.random()*delta_microseconds)
 
 def get_next_date(randomObj):
     return get_next_datetime_modified(randomObj)
+
+def get_next_edd(random_instance):
+    start = datetime.datetime.utcnow()
+    end = start + datetime.timedelta(days=240)  # pregnancy due dates are expected sometime in the next ~8 months
+    print("start {} end {}".format(start, end))
+    return get_next_datetime_modified(random_instance, start, end)
+
 
 def get_next_gps_location(randomObj):
     latitude = str(int(randomObj.random() * 180) - 90)

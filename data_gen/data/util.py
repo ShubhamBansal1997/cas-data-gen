@@ -1,6 +1,7 @@
 import csv
 import os
 from collections import namedtuple
+from datetime import timedelta
 
 from faker import Faker
 
@@ -24,6 +25,8 @@ class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_
     @property
     def context(self):
         if not hasattr(self, '_context'):
+            edd = randomizers.get_next_edd(self.random_instance)
+            lmp = edd - timedelta(days=280)  # 280 = gestational age
             self._context = {
                 'household_case_id': self.case_ids.household,
                 'mother_person_case_id': self.case_ids.mother_person,
@@ -40,7 +43,8 @@ class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_
                 'husband_name': self.fake.name_male(),
                 'mother_phone_number': randomizers.get_next_phone_number(self.random_instance),
                 'add': randomizers.get_next_date(self.random_instance).strftime(randomizers.DATE_FORMAT_STRING),
-                'edd': randomizers.get_next_date(self.random_instance).strftime(randomizers.DATE_FORMAT_STRING),
+                'edd': edd.strftime(randomizers.DATE_FORMAT_STRING),
+                'lmp': lmp.strftime(randomizers.DATE_FORMAT_STRING),
             }
         return self._context
 

@@ -10,7 +10,7 @@
         "has_bank_account": "no",
         "has_mcts": "",
         "has_mobile": "no",
-        "lmp": "2018-11-22",
+        "lmp": "%(lmp)s",
         "mcp_id": "-2",
         "mother_alive": "yes",
         "preg_order": "1",
