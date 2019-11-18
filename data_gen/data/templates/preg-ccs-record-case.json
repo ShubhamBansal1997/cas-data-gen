@@ -27,7 +27,7 @@
         {
             "case_id": "%(pregnant_ccs_record_case_id)s",
             "identifier": "parent",
-            "referenced_id": "%(mother_person_case_id)s",
+            "referenced_id": "%(pregnant_person_case_id)s",
             "referenced_type": "person",
             "relationship": "child"
         }

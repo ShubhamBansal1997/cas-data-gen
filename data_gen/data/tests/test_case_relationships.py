@@ -11,6 +11,8 @@ class TestCaseRelationships(DataGenTestBase):
         ccs_record_case = data_generator.get_mother_ccs_record_case()
         child_case = data_generator.get_child_case()
         child_health_case = data_generator.get_child_health_case()
+        preg_case = data_generator.get_pregnant_case()
+        preg_ccs_record = data_generator.get_pregnant_ccs_record_case()
 
         # mother case parent is household
         self.assertEqual(hh_case['case_id'], mother_case['indices'][0]['referenced_id'])
@@ -31,3 +33,11 @@ class TestCaseRelationships(DataGenTestBase):
         # child health case parent index is child
         self.assertEqual(child_case['case_id'], child_health_case['indices'][0]['referenced_id'])
         self.assertEqual('parent', child_health_case['indices'][0]['identifier'])
+
+        # pregnant case parent is household
+        self.assertEqual(hh_case['case_id'], preg_case['indices'][0]['referenced_id'])
+        self.assertEqual('parent', preg_case['indices'][0]['identifier'])
+
+        # pregnant ccs record case parent is pregnant
+        self.assertEqual(preg_case['case_id'], preg_ccs_record['indices'][0]['referenced_id'])
+        self.assertEqual('parent', preg_ccs_record['indices'][0]['identifier'])
