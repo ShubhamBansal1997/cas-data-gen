@@ -9,9 +9,9 @@ def get_random_pregnant_case(seed_values, override_context=None):
     return randomize_template_values(template, seed_values, override_context)
 
 
-def get_random_mother_case(seed_values):
+def get_random_mother_case(seed_values, override_context=None):
     template = get_template('mother-person-case.json')
-    return randomize_template_values(template, seed_values)
+    return randomize_template_values(template, seed_values, override_context)
 
 
 def get_random_child_case(seed_values):

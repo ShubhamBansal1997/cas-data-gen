@@ -66,6 +66,8 @@ class DataGenerator:
             yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_mother_ccs_record_case()))
             yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_child_case()))
             yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_child_health_case()))
+            if self.change_phone_number:
+                yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_mother_case_new_number()))
 
         yield DataUnit(topics.FORM_TOPIC, get_form_meta(self.get_growth_monitoring_form()))
 
@@ -74,6 +76,11 @@ class DataGenerator:
 
     def get_mother_case(self):
         return get_random_mother_case(self.seed_values)
+
+    def get_mother_case_new_number(self):
+        return get_random_mother_case(self.seed_values, override_context={
+            'mother_phone_number': self.seed_values.context['updated_phone_number']
+        })
 
     def get_mother_ccs_record_case(self):
         return get_random_mother_ccs_record_case(self.seed_values)

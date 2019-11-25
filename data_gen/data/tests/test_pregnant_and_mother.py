@@ -30,7 +30,7 @@ class TestPregnantAndMother(DataGenTestBase):
     def test_mother_types(self):
         while True:
             data_generator = self.get_next_data_generator()
-            if not data_generator.is_pregnant:
+            if not data_generator.is_pregnant and not data_generator.change_phone_number:
                 data = list(data_generator.get_data())
                 self.assertEqual(6, len(data))
                 break
