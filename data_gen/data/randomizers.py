@@ -49,7 +49,6 @@ def get_next_date(randomObj):
 def get_next_edd(random_instance):
     start = datetime.datetime.utcnow()
     end = start + datetime.timedelta(days=240)  # pregnancy due dates are expected sometime in the next ~8 months
-    print("start {} end {}".format(start, end))
     return get_next_datetime_modified(random_instance, start, end)
 
 
