@@ -36,6 +36,8 @@ class DataGenerator:
         self.random_instance = random_instance
         # one in four should be pregnant, the rest should be mothers
         self.is_pregnant = random_instance.random() > .75
+        # one in ten should change their phone number
+        self.change_phone_number = random_instance.random() > .9
         case_ids = CaseIds(
             household=get_next_uuid(self.random_instance),
             mother_person=get_next_uuid(self.random_instance),
@@ -56,6 +58,8 @@ class DataGenerator:
         if self.is_pregnant:
             yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_pregnant_case()))
             yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_pregnant_ccs_record_case()))
+            if self.change_phone_number:
+                yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_pregnant_case_new_number()))
 
         else:
             yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_mother_case()))
@@ -85,6 +89,11 @@ class DataGenerator:
 
     def get_pregnant_case(self):
         return get_random_pregnant_case(self.seed_values)
+
+    def get_pregnant_case_new_number(self):
+        return get_random_pregnant_case(self.seed_values, override_context={
+            'mother_phone_number': self.seed_values.context['updated_phone_number']
+        })
 
     def get_pregnant_ccs_record_case(self):
         return get_random_pregnant_ccs_record_case(self.seed_values)
