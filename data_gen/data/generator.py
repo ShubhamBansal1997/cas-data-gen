@@ -1,4 +1,5 @@
 import random
+from datetime import timedelta
 
 from ..kafka.meta import get_form_meta, get_case_meta
 from ..kafka import topics
@@ -11,7 +12,7 @@ from .household_case import get_random_household_case
 from .locations import get_all_locations
 from .randomizers import get_next_uuid
 from .person_case import get_random_mother_case, get_random_child_case, get_random_pregnant_case
-from .util import DataUnit, SeedValues, CaseIds
+from .util import DataUnit, SeedValues, CaseIds, datetime_to_string
 
 
 def generate_data(count):
@@ -79,7 +80,10 @@ class DataGenerator:
 
     def get_mother_case_new_number(self):
         return get_random_mother_case(self.seed_values, override_context={
-            'mother_phone_number': self.seed_values.context['updated_phone_number']
+            'mother_phone_number': self.seed_values.context['updated_phone_number'],
+            'server_modified_on': datetime_to_string(
+                self.seed_values.context['raw_server_modified_on'] + timedelta(days=30)
+            ),
         })
 
     def get_mother_ccs_record_case(self):
@@ -99,7 +103,10 @@ class DataGenerator:
 
     def get_pregnant_case_new_number(self):
         return get_random_pregnant_case(self.seed_values, override_context={
-            'mother_phone_number': self.seed_values.context['updated_phone_number']
+            'mother_phone_number': self.seed_values.context['updated_phone_number'],
+            'server_modified_on': datetime_to_string(
+                self.seed_values.context['raw_server_modified_on'] + timedelta(days=30)
+            ),
         })
 
     def get_pregnant_ccs_record_case(self):

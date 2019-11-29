@@ -17,6 +17,8 @@ class TestPhoneNumbers(DataGenTestBase):
                         or updated_person.data['document']['case_json']['contact_phone_number']):
                     self.assertNotEqual(initial_person.data['document']['case_json']['contact_phone_number'],
                                         updated_person.data['document']['case_json']['contact_phone_number'])
+                    self.assertNotEqual(initial_person.data['document']['server_modified_on'],
+                                        updated_person.data['document']['server_modified_on'])
                     break
 
     def test_override_phone_number_mother(self):
@@ -33,6 +35,8 @@ class TestPhoneNumbers(DataGenTestBase):
                         or updated_person.data['document']['case_json']['contact_phone_number']):
                     self.assertNotEqual(initial_person.data['document']['case_json']['contact_phone_number'],
                                         updated_person.data['document']['case_json']['contact_phone_number'])
+                    self.assertNotEqual(initial_person.data['document']['server_modified_on'],
+                                        updated_person.data['document']['server_modified_on'])
                     break
 
 

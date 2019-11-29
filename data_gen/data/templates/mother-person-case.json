@@ -53,7 +53,7 @@
     "opened_by": "%(user_id)s",
     "opened_on": "2019-08-28T06:52:23.871000Z",
     "owner_id": "%(owner_id)s",
-    "server_modified_on": "2019-08-28T14:54:00.251809Z",
+    "server_modified_on": "%(server_modified_on)s",
     "transactions": [
     ],
     "type": "person"

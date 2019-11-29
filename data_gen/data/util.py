@@ -1,7 +1,7 @@
 import csv
 import os
 from collections import namedtuple
-from datetime import timedelta
+from datetime import timedelta, datetime
 
 from faker import Faker
 
@@ -27,6 +27,7 @@ class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_
         if not hasattr(self, '_context'):
             edd = randomizers.get_next_edd(self.random_instance)
             lmp = edd - timedelta(days=280)  # 280 = gestational age
+            modified_date = datetime.now()
             self._context = {
                 'household_case_id': self.case_ids.household,
                 'mother_person_case_id': self.case_ids.mother_person,
@@ -46,6 +47,8 @@ class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_
                 'add': randomizers.get_next_date(self.random_instance).strftime(randomizers.DATE_FORMAT_STRING),
                 'edd': edd.strftime(randomizers.DATE_FORMAT_STRING),
                 'lmp': lmp.strftime(randomizers.DATE_FORMAT_STRING),
+                'server_modified_on': datetime_to_string(modified_date),
+                'raw_server_modified_on': modified_date,
             }
         return self._context
 
@@ -64,3 +67,5 @@ def iter_fixture(fixture_name):
         yield from reader
 
 
+def datetime_to_string(dt):
+    return f'{dt.isoformat()}Z'
