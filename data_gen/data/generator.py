@@ -1,6 +1,7 @@
 import random
 from datetime import timedelta
 
+from data_gen.data.birth_preparedness import get_random_bp_form
 from ..kafka.meta import get_form_meta, get_case_meta
 from ..kafka import topics
 from ..kafka.producer import ChangeProducer
@@ -59,6 +60,7 @@ class DataGenerator:
         if self.is_pregnant:
             yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_pregnant_case()))
             yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_pregnant_ccs_record_case()))
+            yield DataUnit(topics.FORM_TOPIC, get_form_meta(self.get_bp_form()))
             if self.change_phone_number:
                 yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_pregnant_case_new_number()))
 
@@ -72,6 +74,7 @@ class DataGenerator:
 
         yield DataUnit(topics.FORM_TOPIC, get_form_meta(self.get_growth_monitoring_form()))
 
+    # cases
     def get_household_case(self):
         return get_random_household_case(self.seed_values)
 
@@ -95,8 +98,6 @@ class DataGenerator:
     def get_child_health_case(self):
         return get_random_child_health_case(self.seed_values)
 
-    def get_growth_monitoring_form(self):
-        return get_random_growth_monitoring_form(self.seed_values)
 
     def get_pregnant_case(self):
         return get_random_pregnant_case(self.seed_values)
@@ -112,3 +113,9 @@ class DataGenerator:
     def get_pregnant_ccs_record_case(self):
         return get_random_pregnant_ccs_record_case(self.seed_values)
 
+    # forms
+    def get_bp_form(self):
+        return get_random_bp_form(self.seed_values)
+
+    def get_growth_monitoring_form(self):
+        return get_random_growth_monitoring_form(self.seed_values)

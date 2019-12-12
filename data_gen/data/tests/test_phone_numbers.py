@@ -8,9 +8,9 @@ class TestPhoneNumbers(DataGenTestBase):
             data_generator = self.get_next_data_generator()
             if data_generator.is_pregnant and data_generator.change_phone_number:
                 data = list(data_generator.get_data())
-                self.assertEqual(5, len(data))
+                self.assertEqual(6, len(data))
                 initial_person = data[1]
-                updated_person = data[3]
+                updated_person = data[4]
                 self.assertEqual(initial_person.data['document']['case_id'],
                                  updated_person.data['document']['case_id'])
                 if (initial_person.data['document']['case_json']['contact_phone_number']
