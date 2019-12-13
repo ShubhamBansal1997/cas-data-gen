@@ -3,8 +3,8 @@ import json
 from data_gen.data.util import get_template
 
 
-def get_random_bp_form(seed_values):
-    template = get_template('forms/bp/bp1.json')
+def get_random_bp_form(seed_values, visit_number):
+    template = get_template('forms/bp/bp{}.json'.format(visit_number))
     return randomize_template_values(template, seed_values)
 
 
