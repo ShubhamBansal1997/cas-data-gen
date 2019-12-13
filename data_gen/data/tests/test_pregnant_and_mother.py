@@ -24,7 +24,7 @@ class TestPregnantAndMother(DataGenTestBase):
             data_generator = self.get_next_data_generator()
             if data_generator.is_pregnant and not data_generator.change_phone_number:
                 data = list(data_generator.get_data())
-                self.assertEqual(5, len(data))
+                self.assertEqual(7, len(data))
                 break
 
     def test_mother_types(self):
