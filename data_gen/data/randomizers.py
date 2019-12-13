@@ -51,7 +51,6 @@ def get_next_edd(random_instance):
     end = start + datetime.timedelta(days=240)  # pregnancy due dates are expected sometime in the next ~8 months
     return get_next_datetime_modified(random_instance, start, end)
 
-
 def get_next_gps_location(randomObj):
     latitude = str(int(randomObj.random() * 180) - 90)
     longitude = str(int(randomObj.random() * 360) - 180)

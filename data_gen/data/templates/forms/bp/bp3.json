@@ -1,0 +1,458 @@
+{
+    "app_id": "a018d370576a2ff993b29f07914673ef",
+    "app_version": null,
+    "auth_context": {
+        "authenticated": true,
+        "doc_type": "AuthContext",
+        "domain": "icds-dashboard-qa",
+        "user_id": "a945d8c900b14a609e8c6463d70bb2d9"
+    },
+    "build_id": "524c982bafbe4075b9606aaf28b3758b",
+    "commcare_version": null,
+    "date_header": null,
+    "deprecated_form_id": null,
+    "domain": "icds-dashboard-qa",
+    "edited_on": null,
+    "external_blobs": {
+        "form.xml": {
+            "content_length": 13483,
+            "content_type": "text/xml",
+            "id": "form/3a14a1f186b54b54aae344102582983a/i6LX2_90uvs"
+        }
+    },
+    "form": {
+        "#type": "data",
+        "@name": "प्रसव के पूर्व तैयारी",
+        "@uiVersion": "1",
+        "@version": "10476",
+        "@xmlns": "http://openrosa.org/formdesigner/2864010F-B1B1-4711-8C59-D5B2B81D65DB",
+        "bank_account_number_final": "",
+        "bank_name_final": "",
+        "blood_group_final": "ab_pos",
+        "blood_group_prev": "ab_pos",
+        "bp1": {
+            "anchor": "2018-11-26",
+            "anemia": "normal",
+            "anemic_last_visit_message": "OK",
+            "calc_due_min_max": {
+                "@count": "7",
+                "@current_index": "7",
+                "@ids": "b1be1892fd8ad911c80e41b8769af294 b1be1892fd8ad911c80e41b8769b5ece b1be1892fd8ad911c80e41b8769b83ba b1be1892fd8ad911c80e41b8769b6704 b1be1892fd8ad911c80e41b8769b1a34 b1be1892fd8ad911c80e41b8769ada66 b1be1892fd8ad911c80e41b8769ae8b0",
+                "item": [
+                    {
+                        "@id": "b1be1892fd8ad911c80e41b8769af294",
+                        "@index": "0",
+                        "filter": {
+                            "already_received": "1",
+                            "anc_complete": "yes",
+                            "relies_on_predecessor": "0"
+                        }
+                    },
+                    {
+                        "@id": "b1be1892fd8ad911c80e41b8769b5ece",
+                        "@index": "1",
+                        "filter": {
+                            "already_received": "0",
+                            "anc_complete": "yes",
+                            "date_predecessor": "2018-09-20",
+                            "received_predecessor": "1",
+                            "received_predecessor_previously": "1",
+                            "relies_on_predecessor": "1",
+                            "updated_predecessor_today": "0",
+                            "updated_today": "1"
+                        }
+                    },
+                    {
+                        "@id": "b1be1892fd8ad911c80e41b8769b83ba",
+                        "@index": "2",
+                        "filter": {
+                            "already_expired": "0",
+                            "already_received": "0",
+                            "anc_complete": "no",
+                            "date_eligible_calc": "2018-11-20",
+                            "date_eligible_w_pred": "2018-11-20",
+                            "date_expires": "2019-05-25",
+                            "date_expires_calc": "2019-05-25",
+                            "date_predecessor": "2018-10-21",
+                            "received_predecessor": "1",
+                            "received_predecessor_previously": "0",
+                            "relies_on_predecessor": "1",
+                            "updated_predecessor_today": "1",
+                            "updated_today": "0"
+                        }
+                    },
+                    {
+                        "@id": "b1be1892fd8ad911c80e41b8769b6704",
+                        "@index": "3",
+                        "filter": {
+                            "already_expired": "0",
+                            "already_received": "0",
+                            "anc_complete": "no",
+                            "date_eligible_calc": "99999",
+                            "date_eligible_w_pred": "2018-08-27",
+                            "date_expires": "2019-05-25",
+                            "date_expires_calc": "0",
+                            "date_predecessor": "",
+                            "received_predecessor": "0",
+                            "received_predecessor_previously": "0",
+                            "relies_on_predecessor": "1",
+                            "updated_predecessor_today": "0",
+                            "updated_today": "0"
+                        }
+                    },
+                    {
+                        "@id": "b1be1892fd8ad911c80e41b8769b1a34",
+                        "@index": "4"
+                    },
+                    {
+                        "@id": "b1be1892fd8ad911c80e41b8769ada66",
+                        "@index": "5",
+                        "filter": {
+                            "already_expired": "0",
+                            "already_received": "0",
+                            "date_eligible_calc": "2018-02-25",
+                            "date_eligible_w_pred": "2018-02-25",
+                            "date_expires": "2019-05-25",
+                            "date_expires_calc": "2019-05-25",
+                            "relies_on_predecessor": "0",
+                            "tt_norm_complete": "no",
+                            "updated_today": "0"
+                        }
+                    },
+                    {
+                        "@id": "b1be1892fd8ad911c80e41b8769ae8b0",
+                        "@index": "6",
+                        "filter": {
+                            "already_expired": "0",
+                            "already_received": "0",
+                            "date_eligible_calc": "99999",
+                            "date_eligible_w_pred": "2018-02-25",
+                            "date_expires": "2019-05-25",
+                            "date_expires_calc": "0",
+                            "date_predecessor": "",
+                            "last_tt_date": "",
+                            "received_predecessor": "0",
+                            "received_predecessor_previously": "0",
+                            "relies_on_predecessor": "1",
+                            "tt_norm_complete": "no",
+                            "updated_predecessor_today": "0",
+                            "updated_today": "0"
+                        }
+                    }
+                ]
+            },
+            "care_mcp_card": "yes",
+            "counsel_ifa": "yes",
+            "due_list_max_expires": "18041",
+            "due_list_min_eligible": "17587",
+            "eating_extra": "yes",
+            "ifa_consumed": "20",
+            "ifa_last_seven_days": "20",
+            "ifa_tablets_issued": "150",
+            "ifa_total_previous_received": "OK",
+            "immu_card_available": "yes",
+            "iodized_salt": "yes",
+            "iteration": {
+                "@count": "7",
+                "@current_index": "7",
+                "@ids": "b1be1892fd8ad911c80e41b8769af294 b1be1892fd8ad911c80e41b8769b5ece b1be1892fd8ad911c80e41b8769b83ba b1be1892fd8ad911c80e41b8769b6704 b1be1892fd8ad911c80e41b8769b1a34 b1be1892fd8ad911c80e41b8769ada66 b1be1892fd8ad911c80e41b8769ae8b0",
+                "item": [
+                    {
+                        "@id": "b1be1892fd8ad911c80e41b8769af294",
+                        "@index": "0",
+                        "filter": {
+                            "already_received": "1",
+                            "update": "no"
+                        }
+                    },
+                    {
+                        "@id": "b1be1892fd8ad911c80e41b8769b5ece",
+                        "@index": "1",
+                        "filter": {
+                            "already_received": "0",
+                            "anc_details": {
+                                "anc_abdominal_exam": "performed",
+                                "anc_abnormalities": "no",
+                                "anc_blood_pressure": "normal",
+                                "anc_facility": "private",
+                                "anc_hemoglobin": "20.0",
+                                "anc_weight": "55",
+                                "bp_dias": "40",
+                                "bp_sys": "70"
+                            },
+                            "balance": {
+                                "@date": "",
+                                "@entity-id": "77b60d0f-c8d5-4fe0-90c7-aad52b116653",
+                                "@section-id": "immuns",
+                                "@type": "store_value",
+                                "@xmlns": "http://commcarehq.org/ledger/v1",
+                                "entry": {
+                                    "@id": "b1be1892fd8ad911c80e41b8769b5ece",
+                                    "@quantity": "17825"
+                                }
+                            },
+                            "date_eligible_w_pred": "2018-10-20",
+                            "date_expires": "2019-05-25",
+                            "date_task": "2018-10-21",
+                            "received": "yes",
+                            "received_predecessor": "1",
+                            "relies_on_predecessor": "1"
+                        }
+                    },
+                    {
+                        "@id": "b1be1892fd8ad911c80e41b8769b83ba",
+                        "@index": "2",
+                        "filter": {
+                            "already_received": "0",
+                            "date_eligible_w_pred": "2018-02-25",
+                            "date_expires": "2019-05-25",
+                            "received_predecessor": "0",
+                            "relies_on_predecessor": "1"
+                        }
+                    },
+                    {
+                        "@id": "b1be1892fd8ad911c80e41b8769b6704",
+                        "@index": "3",
+                        "filter": {
+                            "already_received": "0",
+                            "date_eligible_w_pred": "2018-08-27",
+                            "date_expires": "2019-05-25",
+                            "received_predecessor": "0",
+                            "relies_on_predecessor": "1"
+                        }
+                    },
+                    {
+                        "@id": "b1be1892fd8ad911c80e41b8769b1a34",
+                        "@index": "4"
+                    },
+                    {
+                        "@id": "b1be1892fd8ad911c80e41b8769ada66",
+                        "@index": "5",
+                        "filter": {
+                            "already_received": "0",
+                            "date_eligible_w_pred": "2018-02-25",
+                            "date_expires": "2019-05-25",
+                            "received": "no",
+                            "relies_on_predecessor": "0"
+                        }
+                    },
+                    {
+                        "@id": "b1be1892fd8ad911c80e41b8769ae8b0",
+                        "@index": "6",
+                        "filter": {
+                            "already_received": "0",
+                            "date_eligible_w_pred": "2018-02-25",
+                            "date_expires": "2019-05-25",
+                            "received_predecessor": "0",
+                            "relies_on_predecessor": "1"
+                        }
+                    }
+                ]
+            },
+            "last_thr_visit_date": "",
+            "new_ifa_tablets_total": "200",
+            "num_anc_complete": "2",
+            "prev_ifa_tablets": "50",
+            "prev_ifa_tablets_num": "50",
+            "prev_visit_anemic": "moderate",
+            "resting": "yes",
+            "saving_money": "yes",
+            "schedule_ids": "b1be1892fd8ad911c80e41b8769ada66 b1be1892fd8ad911c80e41b8769ae8b0 b1be1892fd8ad911c80e41b8769af294 b1be1892fd8ad911c80e41b8769b5ece b1be1892fd8ad911c80e41b8769b83ba b1be1892fd8ad911c80e41b8769b6704",
+            "tasks_case_id": "77b60d0f-c8d5-4fe0-90c7-aad52b116653",
+            "thr_collect": "yes",
+            "total_ifa": "OK",
+            "tt_complete": "",
+            "update_ccsrecord_tasks_case": {
+                "update_ccsrecord_tasks_case": {
+                    "case": {
+                        "@case_id": "77b60d0f-c8d5-4fe0-90c7-aad52b116653",
+                        "@date_modified": "2018-11-22T07:52:22.060000Z",
+                        "@user_id": "a945d8c900b14a609e8c6463d70bb2d9",
+                        "@xmlns": "http://commcarehq.org/case/transaction/v2",
+                        "update": {
+                            "due_list_max_expires": "18041",
+                            "due_list_min_eligible": "17587",
+                            "num_anc_complete": "2",
+                            "tt_complete": ""
+                        }
+                    }
+                }
+            },
+            "using_ifa": "yes"
+        },
+        "bp2": {
+            "accompany": "yes",
+            "blood_donor_identified": "yes",
+            "care_of_home": "yes",
+            "cord_care": "yes",
+            "counsel_preparation": "yes",
+            "danger_institution": "yes",
+            "danger_number": "yes",
+            "has_danger_signs": "no",
+            "immediate_breastfeeding": "%(random_yes_no)s",
+            "labor_pains": "no",
+            "last_visit_blood_donor": "no",
+            "last_visit_clean_cloth": "",
+            "last_visit_emergency": "no",
+            "last_visit_hospital_phone": "",
+            "last_visit_inst_del_decision": "yes",
+            "last_visit_materials": "",
+            "last_visit_phone_num_vehicle": "",
+            "last_visit_sba_decision": "",
+            "last_visit_sba_phone": "",
+            "last_visit_vehicle_decision": "no",
+            "maternal_danger_signs": "yes",
+            "not_yet_maternal_emergency": "OK",
+            "not_yet_maternal_emergency_number": "OK",
+            "not_yet_phone_number": "OK",
+            "not_yet_vehicle": "OK",
+            "phone_vehicle": "yes",
+            "play_birth_preparedness_vid": "no",
+            "rti_sti": "no",
+            "skin_to_skin": "yes",
+            "vehicle": "yes",
+            "wrapping": "yes"
+        },
+        "bp3_date": "2018-11-22",
+        "branch_name_final": "",
+        "case_load_ccs_record0": {
+            "case": {
+                "@case_id": "%(pregnant_ccs_record_case_id)s",
+                "@date_modified": "2018-11-22T07:52:22.060000Z",
+                "@user_id": "a945d8c900b14a609e8c6463d70bb2d9",
+                "@xmlns": "http://commcarehq.org/case/transaction/v2",
+                "update": {
+                    "anemia": "normal",
+                    "bank_account_number": "",
+                    "bank_branch_name": "",
+                    "bank_ifsc_code": "",
+                    "bank_name": "",
+                    "blood_donor_identified": "yes",
+                    "bp3_date": "2018-11-22",
+                    "care_mcp_card": "yes",
+                    "ccs_phase": "bp",
+                    "current_schedule_phase": "1",
+                    "danger_institution": "yes",
+                    "danger_number": "yes",
+                    "eating_extra": "yes",
+                    "edd": "2018-11-26",
+                    "has_bank_account": "no",
+                    "ifa_consumed_last_seven": "20",
+                    "ifa_tablets_issued_pre": "200",
+                    "last_visit_date_bp": "2018-11-22T07:52:22.060000Z",
+                    "last_visit_number_bp": "3",
+                    "lmp": "2018-02-19",
+                    "num_anc_complete": "2",
+                    "num_bp_sched_visits": "",
+                    "phone_vehicle": "yes",
+                    "resting": "yes",
+                    "tt_complete": "",
+                    "using_ifa": "yes",
+                    "vehicle_decision": "yes"
+                }
+            },
+            "parents": {
+                "parent": {
+                    "case": {
+                        "@case_id": "c64daecf-96fc-426a-a98f-e5369c8d772e",
+                        "@date_modified": "2018-11-22T07:52:22.060000Z",
+                        "@user_id": "a945d8c900b14a609e8c6463d70bb2d9",
+                        "@xmlns": "http://commcarehq.org/case/transaction/v2",
+                        "update": {
+                            "blood_group": "ab_pos",
+                            "referral_status": "referred"
+                        }
+                    }
+                }
+            }
+        },
+        "ccs_phase": "bp",
+        "cur_edd": "2018-11-26",
+        "cur_lmp": "2018-02-19",
+        "current_visit_number": "3",
+        "days_visit_late": "41",
+        "due_for_delivery": "OK",
+        "edd_correct": "yes",
+        "family_planning_group": {
+            "counsel_accessible_ppfp": "yes",
+            "counsel_methods": "yes",
+            "help_decide": "OK",
+            "immediate_appropriate": "no",
+            "postpone_conception": "no",
+            "risk_of_preg": "yes",
+            "stop_children": "yes"
+        },
+        "gps_location": "",
+        "has_bank_account": "no",
+        "has_bank_account_final": "no",
+        "ifsc_code_final": "",
+        "last_preg_tt_loaded": "no",
+        "living_children_repeat": {
+            "@count": "0",
+            "@current_index": "0",
+            "@ids": ""
+        },
+        "meta": {
+            "@xmlns": "http://openrosa.org/jr/xforms",
+            "appVersion": {
+                "#text": "CommCare Android, version \"2.44.4\"(452665). App v10519. CommCare Version 2.44. Build 452665, built on: 2018-09-17",
+                "@xmlns": "http://commcarehq.org/xforms"
+            },
+            "deviceID": "c385f718726ec598",
+            "instanceID": "82ac405e-ccbc-4eef-a1f1-0a164bdbb6c9",
+            "location": {
+                "@xmlns": "http://commcarehq.org/xforms"
+            },
+            "timeEnd": "%(submission_time)s",
+            "timeStart": "2018-11-22T07:47:09.394000Z",
+            "userID": "a945d8c900b14a609e8c6463d70bb2d9",
+            "username": "awc3test"
+        },
+        "mother_name": "Second.tri",
+        "name_local_transport": "",
+        "name_private_hospital": "",
+        "name_public_hospital": "",
+        "new_edd": "2018-11-26",
+        "new_lmp": "2018-02-19",
+        "next_bp": "17816",
+        "next_delivery": "17854",
+        "next_due": "2018-10-12",
+        "next_visit_date": "2018-10-12",
+        "num_bp_sched_visits": "",
+        "num_bp_sched_visits_prev": "",
+        "num_living_children": "0",
+        "phone_number_ambulance": "",
+        "phone_number_local_transport": "",
+        "phone_number_private_hospital": "",
+        "phone_number_public_hospital": "",
+        "prev_bank_account_number": "",
+        "prev_bank_name": "",
+        "prev_branch_name": "",
+        "prev_couple_interested": "yes",
+        "prev_had_bank_account": "no",
+        "prev_ifsc_code": "",
+        "prev_referral_status": "referred",
+        "referral_status": "referred",
+        "success": "OK",
+        "unscheduled_visit": "0"
+    },
+    "form_id": "%(form_id)s",
+    "history": [],
+    "id": 829113,
+    "initial_processing_complete": true,
+    "last_sync_token": "ff80ea54bca811e8ae530691280011e4",
+    "openrosa_headers": {
+        "HTTP_X_OPENROSA_VERSION": "3.0"
+    },
+    "orig_id": null,
+    "partial_submission": false,
+    "problem": null,
+    "received_on": "%(submission_time)s",
+    "server_modified_on": "2018-09-20T07:52:24.018874Z",
+    "state": "normal",
+    "submit_ip": "203.100.67.204",
+    "time_end": null,
+    "time_start": null,
+    "user_id": "a945d8c900b14a609e8c6463d70bb2d9",
+    "xmlns": "http://openrosa.org/formdesigner/2864010F-B1B1-4711-8C59-D5B2B81D65DB"
+}

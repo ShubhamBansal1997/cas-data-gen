@@ -27,6 +27,9 @@ class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_
         if not hasattr(self, '_context'):
             edd = randomizers.get_next_edd(self.random_instance)
             lmp = edd - timedelta(days=280)  # 280 = gestational age
+            bp1_date = lmp + timedelta(days=90)
+            bp2_date = lmp + timedelta(days=180)
+            bp3_date = lmp + timedelta(days=230)
             modified_date = datetime.now()
             self._context = {
                 'household_case_id': self.case_ids.household,
@@ -49,6 +52,9 @@ class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_
                 'lmp': lmp.strftime(randomizers.DATE_FORMAT_STRING),
                 'server_modified_on': datetime_to_string(modified_date),
                 'raw_server_modified_on': modified_date,
+                'bp1_date': datetime_to_string(bp1_date),
+                'bp2_date': datetime_to_string(bp2_date),
+                'bp3_date': datetime_to_string(bp3_date),
             }
         return self._context
 

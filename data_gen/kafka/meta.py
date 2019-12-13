@@ -41,7 +41,7 @@ class ChangeMeta(jsonobject.JsonObject):
 def get_form_meta(document):
     # todo: other fields
     return ChangeMeta(
-        document_id=document['_id'],
+        document_id=document['form_id'],
         data_source_type='sql',
         data_source_name='form-sql',
         document_type='XFormInstance',
