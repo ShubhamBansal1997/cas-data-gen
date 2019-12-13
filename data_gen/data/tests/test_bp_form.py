@@ -17,6 +17,10 @@ class TestCaseRelationships(DataGenTestBase):
                                      data_generator.seed_values.case_ids.pregnant_ccs_record)
                     self.assertEqual(ccs_record_case.data['document']['case_id'],
                                      bp_form.data['document']['form']['case_load_ccs_record0']['case']['@case_id'])
+                    self.assertNotEqual(
+                        '%(form_id)s',
+                        bp_form.data['document']['form_id']
+                    )
                 break
 
 
