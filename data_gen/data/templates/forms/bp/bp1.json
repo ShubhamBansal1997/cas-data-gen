@@ -301,7 +301,7 @@
             "counsel_preparation": "yes",
             "danger_institution": "no",
             "has_danger_signs": "yes",
-            "immediate_breastfeeding": "yes",
+            "immediate_breastfeeding": "%(random_yes_no)s",
             "labor_pains": "yes",
             "last_visit_blood_donor": "",
             "last_visit_clean_cloth": "",

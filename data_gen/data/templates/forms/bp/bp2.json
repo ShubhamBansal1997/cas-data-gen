@@ -277,7 +277,7 @@
             "danger_institution": "yes",
             "danger_number": "yes",
             "has_danger_signs": "no",
-            "immediate_breastfeeding": "no",
+            "immediate_breastfeeding": "%(random_yes_no)s",
             "labor_pains": "no",
             "last_visit_blood_donor": "",
             "last_visit_clean_cloth": "",
