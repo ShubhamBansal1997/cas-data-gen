@@ -38,6 +38,12 @@ class TestPregnantAndMother(DataGenTestBase):
                 self.assertEqual(6, len(data))
                 break
 
+    def test_bp_dates(self):
+        data_generator = self._get_random_pregnant_data_generator()
+        ccs_record_case = data_generator.get_pregnant_ccs_record_case()
+        self.assertTrue(ccs_record_case['case_json']['bp1_date'] < ccs_record_case['case_json']['bp2_date'])
+        self.assertTrue(ccs_record_case['case_json']['bp2_date'] < ccs_record_case['case_json']['bp3_date'])
+
     def test_edds_are_random_in_future(self):
         edds = []
         now = datetime.utcnow()
