@@ -19,13 +19,16 @@ class TestPregnantAndMother(DataGenTestBase):
         self.assertTrue(pregnant_count > 10)
         self.assertTrue(mother_count > 50)
 
-    def test_pregnant_types(self):
+    def _get_random_pregnant_data_generator(self):
         while True:
             data_generator = self.get_next_data_generator()
             if data_generator.is_pregnant and not data_generator.change_phone_number:
-                data = list(data_generator.get_data())
-                self.assertEqual(7, len(data))
-                break
+                return data_generator
+
+    def test_pregnant_types(self):
+        data_generator = self._get_random_pregnant_data_generator()
+        data = list(data_generator.get_data())
+        self.assertEqual(7, len(data))
 
     def test_mother_types(self):
         while True:
