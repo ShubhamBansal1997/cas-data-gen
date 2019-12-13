@@ -4,7 +4,7 @@ from data_gen.data.util import get_template
 
 
 def get_random_bp_form(seed_values):
-    template = get_template('bp-form.json')
+    template = get_template('forms/bp/bp2.json')
     return randomize_template_values(template, seed_values)
 
 
