@@ -429,7 +429,7 @@
                 "#text": "30.7265917 76.8422186 0.0 21.82",
                 "@xmlns": "http://commcarehq.org/xforms"
             },
-            "timeEnd": "2018-09-20T07:43:05.923000Z",
+            "timeEnd": "%(submission_time)s",
             "timeStart": "2018-09-20T07:34:32.362000Z",
             "userID": "a945d8c900b14a609e8c6463d70bb2d9",
             "username": "awc3test"
@@ -487,7 +487,7 @@
     "orig_id": null,
     "partial_submission": false,
     "problem": null,
-    "received_on": "2018-09-20T07:43:07.139769Z",
+    "received_on": "%(submission_time)s",
     "server_modified_on": "2018-09-20T07:43:07.949378Z",
     "state": "normal",
     "submit_ip": "203.100.67.204",

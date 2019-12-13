@@ -21,6 +21,19 @@ class TestCaseRelationships(DataGenTestBase):
                         '%(form_id)s',
                         bp_form.data['document']['form_id']
                     )
+                    self.assertEqual(
+                      bp_form.data['document']['received_on'],
+                      bp_form.data['document']['form']['meta']['timeEnd'],
+                    )
+
+                bp1, bp2, bp3 = bp_form_data
+
+                self.assertTrue(
+                    bp1.data['document']['form']['meta']['timeEnd'] < bp2.data['document']['form']['meta']['timeEnd']
+                )
+                self.assertTrue(
+                    bp2.data['document']['form']['meta']['timeEnd'] < bp3.data['document']['form']['meta']['timeEnd']
+                )
                 break
 
 
