@@ -32,7 +32,7 @@
         "blood_group_prev": "ab_pos",
         "bp1": {
             "anchor": "2018-11-26",
-            "anemia": "moderate",
+            "anemia": "%(anemia)s",
             "calc_due_min_max": {
                 "@count": "7",
                 "@current_index": "7",
@@ -150,7 +150,7 @@
             "counsel_ifa": "no",
             "due_list_max_expires": "18041",
             "due_list_min_eligible": "17587",
-            "eating_extra": "yes",
+            "eating_extra": "%(random_yes_no)s",
             "ifa_consumed": "10",
             "ifa_last_seven_days": "10",
             "ifa_tablets_issued": "50",
@@ -169,13 +169,13 @@
                             "already_received": "0",
                             "anc_details": {
                                 "anc_abdominal_exam": "not_performed",
-                                "anc_abnormalities": "no",
-                                "anc_blood_pressure": "normal",
+                                "anc_abnormalities": "%(random_yes_no)s",
+                                "anc_blood_pressure": "%(anc_blood_pressure)s",
                                 "anc_facility": "public",
-                                "anc_hemoglobin": "11.0",
-                                "anc_weight": "60",
-                                "bp_dias": "50",
-                                "bp_sys": "100"
+                                "anc_hemoglobin": "%(random_decimal)s",
+                                "anc_weight": "%(random_int)s",
+                                "bp_dias": "%(random_int)s",
+                                "bp_sys": "%(random_int)s"
                             },
                             "balance": {
                                 "@date": "",
@@ -263,7 +263,7 @@
             "prev_ifa_tablets": "",
             "prev_ifa_tablets_num": "0",
             "prev_visit_anemic": "",
-            "resting": "yes",
+            "resting": "%(random_yes_no)s",
             "saving_money": "yes",
             "schedule_ids": "b1be1892fd8ad911c80e41b8769ada66 b1be1892fd8ad911c80e41b8769ae8b0 b1be1892fd8ad911c80e41b8769af294 b1be1892fd8ad911c80e41b8769b5ece b1be1892fd8ad911c80e41b8769b83ba b1be1892fd8ad911c80e41b8769b6704",
             "tasks_case_id": "77b60d0f-c8d5-4fe0-90c7-aad52b116653",
@@ -292,11 +292,11 @@
         "bp2": {
             "accompany": "yes",
             "birth_preparedness_vid": "OK",
-            "bleeding": "no",
+            "bleeding": "%(random_yes_no)s",
             "blood_donor_identified": "no",
-            "blurred_vision": "no",
+            "blurred_vision": "%(random_yes_no)s",
             "care_of_home": "no",
-            "convulsions": "yes",
+            "convulsions": "%(random_yes_no)s",
             "cord_care": "yes",
             "counsel_preparation": "yes",
             "danger_institution": "no",
@@ -322,9 +322,9 @@
             "other_danger_sign": "no",
             "play_birth_preparedness_vid": "yes",
             "rti_sti": "no",
-            "rupture": "yes",
+            "rupture": "%(random_yes_no)s",
             "skin_to_skin": "yes",
-            "swelling": "no",
+            "swelling": "%(random_yes_no)s",
             "vehicle": "no",
             "which_hospital": "block_phc",
             "wrapping": "no"

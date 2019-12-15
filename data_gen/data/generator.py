@@ -101,7 +101,6 @@ class DataGenerator:
     def get_child_health_case(self):
         return get_random_child_health_case(self.seed_values)
 
-
     def get_pregnant_case(self):
         return get_random_pregnant_case(self.seed_values)
 
