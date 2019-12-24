@@ -13,6 +13,7 @@ CaseIds = namedtuple('CaseIds', [
     'pregnant_ccs_record', 'ccs_record',
 ])
 
+
 class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_ids'])):
 
     @property
@@ -31,6 +32,8 @@ class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_
             bp2_date = lmp + timedelta(days=180)
             bp3_date = lmp + timedelta(days=230)
             modified_date = datetime.now()
+            # server_modified_on is actually the latest datetime when the case
+            # is updated for raw data we are assuming this to be bp3_date
             self._context = {
                 'household_case_id': self.case_ids.household,
                 'mother_person_case_id': self.case_ids.mother_person,
@@ -57,6 +60,7 @@ class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_
                 'bp3_date': datetime_to_string(bp3_date),
             }
         return self._context
+
 
 def get_template(template_name):
     template_filename = os.path.join(os.path.dirname(__file__), 'templates', template_name)

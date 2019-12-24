@@ -2,6 +2,7 @@ import random
 from datetime import timedelta
 
 from data_gen.data.birth_preparedness import get_random_bp_form
+from data_gen.data.post_natal_care import get_random_pnc_form
 from ..kafka.meta import get_form_meta, get_case_meta
 from ..kafka import topics
 from ..kafka.producer import ChangeProducer
@@ -66,6 +67,7 @@ class DataGenerator:
             # forms
             for i in range(3):
                 yield DataUnit(topics.FORM_TOPIC, get_form_meta(self.get_bp_form(i + 1)))
+            yield DataUnit(topics.FORM_TOPIC, get_form_meta(self.get_pnc_form()))
 
         else:
             yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_mother_case()))
@@ -121,3 +123,6 @@ class DataGenerator:
 
     def get_growth_monitoring_form(self):
         return get_random_growth_monitoring_form(self.seed_values)
+
+    def get_pnc_form(self):
+        return get_random_pnc_form(self.seed_values)
