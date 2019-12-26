@@ -31,7 +31,9 @@
         "lmp": "%(lmp)s",
         "mcp_id": "9-8",
         "mother_alive": "yes",
+        "num_pnc_visits": "%(num_pnc_visits)s",
         "num_anc_complete": "%(num_anc_complete)s",
+        "delivery_nature": "%(delivery_nature)s",
         "num_bp_sched_visits": "1",
         "phone_vehicle": "yes",
         "preg_order": "1",
@@ -41,7 +43,7 @@
         "using_ifa": "yes",
         "vehicle_decision": "yes"
     },
-    "closed": false,
+    "closed": "%(closed)i",
     "closed_by": null,
     "closed_on": null,
     "deleted": false,
@@ -62,7 +64,7 @@
     "modified_on": "2019-07-24T13:16:51.319000Z",
     "name": "ccs_record",
     "opened_by": "%(user_id)s",
-    "opened_on": "2019-07-24T13:16:51.319000Z",
+    "opened_on": "%(opened_on)s",
     "owner_id": "%(owner_id)s",
     "server_modified_on": "%(server_modified_on)s",
     "transactions": [

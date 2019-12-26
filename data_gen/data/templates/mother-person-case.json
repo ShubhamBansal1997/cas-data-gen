@@ -27,11 +27,11 @@
         "phone_number": "",
         "raw_aadhar_string": "",
         "rch_id": "",
-        "resident": "yes",
+        "resident": "%(random_yes_no)s",
         "sex": "F",
         "time_zone": "Asia/Kolkata"
     },
-    "closed": false,
+    "closed": "%(closed)i",
     "closed_by": null,
     "closed_on": null,
     "deleted": false,
@@ -52,7 +52,7 @@
     "modified_on": "2019-08-28T09:35:17.085000Z",
     "name": "%(mother_name)s",
     "opened_by": "%(user_id)s",
-    "opened_on": "2019-08-28T06:52:23.871000Z",
+    "opened_on": "%(opened_on)s",
     "owner_id": "%(owner_id)s",
     "server_modified_on": "%(server_modified_on)s",
     "transactions": [

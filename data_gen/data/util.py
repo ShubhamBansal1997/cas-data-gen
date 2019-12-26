@@ -69,8 +69,12 @@ class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_
                 'date_death': random_date.strftime(randomizers.DATE_FORMAT_STRING),
                 'last_date_thr': random_date.strftime(randomizers.DATE_FORMAT_STRING),
                 'num_anc_complete': int(self.random_instance.random() * 4),
+                'num_pnc_visits': int(self.random_instance.random() * 4),
                 'opened_on': datetime_to_string(opened_on),
-                'random_yes_no': randomizers.get_next_yes_no(self.random_instance)
+                'random_yes_no': randomizers.get_next_yes_no(self.random_instance),
+                'closed': randomizers.get_next_bool_value(self.random_instance),
+                'migration_status': randomizers.get_random_migration_status(self.random_instance),
+                'delivery_nature': randomizers.get_random_delivery_nature(self.random_instance)
             }
         return self._context
 

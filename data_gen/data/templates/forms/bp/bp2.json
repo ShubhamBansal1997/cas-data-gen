@@ -157,7 +157,7 @@
             "due_list_min_eligible": "17673",
             "eating_extra": "no",
             "ifa_consumed": "25",
-            "ifa_last_seven_days": "25",
+            "ifa_last_seven_days": "%(ifa_last_seven_days)s",
             "ifa_tablets_issued": "80",
             "ifa_total_previous_received": "OK",
             "immu_card_available": "yes",
@@ -268,7 +268,7 @@
                     }
                 }
             },
-            "using_ifa": "yes"
+            "using_ifa": "%(random_yes_no)s"
         },
         "bp2": {
             "blood_donor_identified": "yes",

@@ -8,7 +8,7 @@
         "hh_reg_date": "2019-07-24",
         "hh_religion": "hindu"
     },
-    "closed": false,
+    "closed": "%(closed)i",
     "closed_by": null,
     "closed_on": null,
     "deleted": false,
@@ -21,7 +21,7 @@
     "modified_on": "2019-07-25T10:26:08.865000Z",
     "name": "hh1",
     "opened_by": "%(user_id)s",
-    "opened_on": "2019-07-24T07:37:31.553000Z",
+    "opened_on": "%(opened_on)s",
     "owner_id": "%(owner_id)s",
     "server_modified_on": "%(server_modified_on)s",
     "transactions": [

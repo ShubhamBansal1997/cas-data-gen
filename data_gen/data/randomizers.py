@@ -19,6 +19,8 @@ ANEMIA_STATES = ["", "severe", "moderate", "normal"]
 MAX_VALUE = 35000
 ANC_BLOOD_PRESSURE_STATES = ["", "normal", "high", "not_measured"]
 CHILD_BIRTH_LOCATIONS = ["hospital", "home"]
+MIGRATION_STATUS = ["migrated", ""]
+DELIVERY_NATURES = ["", "vaginal", "caesarean", "instrumental"]
 
 # Functions to get specific variables within templates
 
@@ -146,3 +148,18 @@ def get_next_phone_number(random_instance):
         return f'+91{random_instance.randint(1000000000, 9999999999)}'
     else:
         return ''
+
+
+def get_next_bool_value(randomObj):
+    if randomObj.random() < .5:
+        return True
+    else:
+        return False
+
+
+def get_random_migration_status(randomObj):
+    return MIGRATION_STATUS[int(randomObj.random() * 2)]
+
+
+def get_random_delivery_nature(randomObj):
+    return DELIVERY_NATURES[int(randomObj.random() * 4)]

@@ -1,6 +1,6 @@
 import json
 
-from data_gen.data.randomizers import get_next_uuid, get_next_yes_no, get_anemia_state, get_int, get_anc_blood_pressure_state, get_decimal
+from data_gen.data.randomizers import get_next_uuid, get_next_yes_no, get_anemia_state, get_int, get_anc_blood_pressure_state, get_decimal, get_nextInt
 from data_gen.data.util import get_template
 
 
@@ -18,7 +18,8 @@ def randomize_template_values(template_string, seed_values, visit_number):
         'anemia': get_anemia_state(seed_values.random_instance),
         'random_int': get_int(seed_values.random_instance),
         'anc_blood_pressure': get_anc_blood_pressure_state(seed_values.random_instance),
-        'random_decimal': get_decimal(seed_values.random_instance)
+        'random_decimal': get_decimal(seed_values.random_instance),
+        'ifa_last_seven_days': get_nextInt(seed_values.random_instance)
     }
     form_context.update(seed_values.context)
     formatted_case = template_string % form_context

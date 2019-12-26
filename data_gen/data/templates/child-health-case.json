@@ -6,7 +6,7 @@
         "display_icon_z3": "grey",
         "display_icon_z4": "grey"
     },
-    "closed": false,
+    "closed": "%(closed)i",
     "closed_by": null,
     "closed_on": null,
     "deleted": false,
@@ -27,7 +27,7 @@
     "modified_on": "2019-07-24T07:37:31.553000Z",
     "name": "child_health",
     "opened_by": "%(user_id)s",
-    "opened_on": "2019-07-24T07:37:31.553000Z",
+    "opened_on": "%(opened_on)s",
     "owner_id": "%(owner_id)s",
     "server_modified_on": "%(server_modified_on)s",
     "transactions": [
