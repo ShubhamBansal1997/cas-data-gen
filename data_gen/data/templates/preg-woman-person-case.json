@@ -33,12 +33,13 @@
         "mcts_id": "",
         "mother_name": "",
         "phone_number": "",
-        "preg_order": "1",
+        "preg_order": "%(preg_order)s",
         "raw_aadhar_string": "",
         "rch_id": "",
         "resident": "yes",
         "sex": "F",
-        "time_zone": "Asia/Kolkata"
+        "time_zone": "Asia/Kolkata",
+        "child_birth_location": "%(child_birth_location)s"
     },
     "closed": false,
     "closed_by": null,

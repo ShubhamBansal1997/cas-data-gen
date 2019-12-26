@@ -7,8 +7,10 @@ RANDOM_EXAMPLE = random.Random("a")
 RANDOM_FORM1 = random.Random("form1")
 RANDOM_FORM2 = random.Random("form2")
 DATE_FORMAT_STRING = '%Y-%m-%d'
-ACTIVITY_LIST = ["prayer_hygiene", "conversation", "cognitive", "physical_outdoor", "arts_crafts", "language", "packup"]
-MEAL_SERVED_LIST = ["cooked_served_hot", "cooked_served_cold", "packed_served_hot", "packed_served_cold", "not_served"]
+ACTIVITY_LIST = ["prayer_hygiene", "conversation", "cognitive",
+                 "physical_outdoor", "arts_crafts", "language", "packup"]
+MEAL_SERVED_LIST = ["cooked_served_hot", "cooked_served_cold",
+                    "packed_served_hot", "packed_served_cold", "not_served"]
 START_DATETIME = datetime.datetime(2018, 7, 1)
 END_DATETIME = datetime.datetime(2019, 7, 1)
 LOCATIONS_FILE = "locations.csv"
@@ -16,9 +18,11 @@ CASE_LIST = []
 ANEMIA_STATES = ["", "severe", "moderate", "normal"]
 MAX_VALUE = 35000
 ANC_BLOOD_PRESSURE_STATES = ["", "normal", "high", "not_measured"]
-
+CHILD_BIRTH_LOCATIONS = ["hospital", "home"]
 
 # Functions to get specific variables within templates
+
+
 def get_next_uuid(randomObj):
     return str(uuid.UUID(int=randomObj.getrandbits(128)))
 
@@ -56,6 +60,10 @@ def get_anemia_state(randomObj):
 
 def get_anc_blood_pressure_state(randomObj):
     return ANC_BLOOD_PRESSURE_STATES[int(randomObj.random() * 4)]
+
+
+def get_next_child_birth_location(randomObj):
+    return CHILD_BIRTH_LOCATIONS[int(randomObj.random() * 2)]
 
 
 def get_next_child_id(randomObj):

@@ -360,7 +360,7 @@
             }
         },
         "ccs_phase": "bp",
-        "conceive": "yes",
+        "conceive": "%(random_yes_no)s",
         "couple_interested_fp": "yes",
         "cur_edd": "2019-02-20",
         "cur_lmp": "2018-05-16",
@@ -369,7 +369,7 @@
         "edd_correct": "yes",
         "family_planning_group": {
             "avail_immediate": "yes",
-            "counsel_accessible_ppfp": "yes",
+            "counsel_accessible_ppfp": "%(random_yes_no)s",
             "counsel_benefits": "yes",
             "counsel_disqualification": "yes",
             "counsel_institution": "yes",
@@ -425,7 +425,7 @@
         "phone_number_local_transport": "5",
         "phone_number_private_hospital": "456",
         "phone_number_public_hospital": "",
-        "play_family_planning_vid": "yes",
+        "play_family_planning_vid": "%(random_yes_no)s",
         "prev_bank_account_number": "",
         "prev_bank_name": "",
         "prev_branch_name": "",

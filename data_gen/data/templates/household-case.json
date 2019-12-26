@@ -4,7 +4,7 @@
         "hh_bpl_apl": "bpl",
         "hh_caste": "st",
         "hh_gps_location": "30.7264254 76.8421945 314.0 23.54",
-        "hh_minority": "no",
+        "hh_minority": "%(random_yes_no)s",
         "hh_reg_date": "2019-07-24",
         "hh_religion": "hindu"
     },

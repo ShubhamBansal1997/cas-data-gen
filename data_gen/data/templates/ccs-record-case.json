@@ -6,7 +6,9 @@
         "child_name": "%(child_name)s",
         "current_schedule_phase": "2",
         "has_mcts": "",
-        "mcts_id": ""
+        "mcts_id": "",
+        "last_date_thr": "%(last_date_thr)s",
+        "num_pnc_visits": "1"
     },
     "closed": false,
     "closed_by": null,

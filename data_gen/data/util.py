@@ -32,6 +32,11 @@ class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_
             bp2_date = lmp + timedelta(days=180)
             bp3_date = lmp + timedelta(days=230)
             modified_date = datetime.now()
+            # Need to be fix
+            # As of now it will take a random date from the next 360 days as per the lmp
+            random_date = lmp + timedelta(days=randomizers.get_nextInt(self.random_instance) * 36)
+            opened_on = lmp - timedelta(days=10)
+            pnc1_date = lmp + timedelta(days=300)
             # server_modified_on is actually the latest datetime when the case
             # is updated for raw data we are assuming this to be bp3_date
             self._context = {
@@ -58,6 +63,14 @@ class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_
                 'bp1_date': datetime_to_string(bp1_date),
                 'bp2_date': datetime_to_string(bp2_date),
                 'bp3_date': datetime_to_string(bp3_date),
+                'pnc1_date': datetime_to_string(pnc1_date),
+                'child_birth_location': randomizers.get_next_child_birth_location(self.random_instance),
+                'preg_order': randomizers.get_nextInt(self.random_instance),
+                'date_death': random_date.strftime(randomizers.DATE_FORMAT_STRING),
+                'last_date_thr': random_date.strftime(randomizers.DATE_FORMAT_STRING),
+                'num_anc_complete': int(self.random_instance.random() * 4),
+                'opened_on': datetime_to_string(opened_on),
+                'random_yes_no': randomizers.get_next_yes_no(self.random_instance)
             }
         return self._context
 
