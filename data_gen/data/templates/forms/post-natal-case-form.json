@@ -5,7 +5,7 @@
         "authenticated": true,
         "doc_type": "AuthContext",
         "domain": "icds-cas",
-        "user_id": "e5a97dc5a93440cab908e75fe8bfab94"
+        "user_id": "%(user_id)s"
     },
     "build_id": "1509f0b9ca9e466bbef757004adf75cc",
     "commcare_version": null,
@@ -34,7 +34,7 @@
             "case": {
                 "@case_id": "%(pregnant_ccs_record_case_id)s",
                 "@date_modified": "2019-11-21T11:23:32.378000Z",
-                "@user_id": "e5a97dc5a93440cab908e75fe8bfab94",
+                "@user_id": "%(user_id)s",
                 "@xmlns": "http://commcarehq.org/case/transaction/v2",
                 "update": {
                     "ccs_phase": "pnc",
@@ -88,9 +88,9 @@
                 "update_child_health_case": {
                     "update_child_health": {
                         "case": {
-                            "@case_id": "ea57d3bf-5827-4189-9aea-ade9d4a0a595",
+                            "@case_id": "%(child_health_case_id)s",
                             "@date_modified": "2019-11-21T11:23:32.378000Z",
-                            "@user_id": "e5a97dc5a93440cab908e75fe8bfab94",
+                            "@user_id": "%(user_id)s",
                             "@xmlns": "http://commcarehq.org/case/transaction/v2",
                             "update": {
                                 "cord_fallen": "",
@@ -196,6 +196,6 @@
     "submit_ip": "180.151.231.114",
     "time_end": null,
     "time_start": null,
-    "user_id": "e5a97dc5a93440cab908e75fe8bfab94",
+    "user_id": "%(user_id)s",
     "xmlns": "http://openrosa.org/formdesigner/D4A7ABD2-A7B8-431B-A88B-38245173B0AE"
 }

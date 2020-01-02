@@ -257,7 +257,7 @@
                     "case": {
                         "@case_id": "b7651069-3919-4b61-bf3c-4c0d9e3997c6",
                         "@date_modified": "2019-02-04T16:02:23.420000Z",
-                        "@user_id": "a945d8c900b14a609e8c6463d70bb2d9",
+                        "@user_id": "%(user_id)s",
                         "@xmlns": "http://commcarehq.org/case/transaction/v2",
                         "update": {
                             "due_list_max_expires": "18127",
@@ -349,7 +349,7 @@
                     "case": {
                         "@case_id": "ba0569f5-2dae-4fee-9672-be6fe1812d94",
                         "@date_modified": "2019-02-04T16:02:23.420000Z",
-                        "@user_id": "a945d8c900b14a609e8c6463d70bb2d9",
+                        "@user_id": "%(user_id)s",
                         "@xmlns": "http://commcarehq.org/case/transaction/v2",
                         "update": {
                             "blood_group": "ab_pos",

@@ -5,7 +5,7 @@
         "authenticated": true,
         "doc_type": "AuthContext",
         "domain": "icds-dashboard-qa",
-        "user_id": "a945d8c900b14a609e8c6463d70bb2d9"
+        "user_id": "%(user_id)s"
     },
     "build_id": "524c982bafbe4075b9606aaf28b3758b",
     "commcare_version": null,
@@ -267,7 +267,7 @@
                     "case": {
                         "@case_id": "77b60d0f-c8d5-4fe0-90c7-aad52b116653",
                         "@date_modified": "2018-11-22T07:52:22.060000Z",
-                        "@user_id": "a945d8c900b14a609e8c6463d70bb2d9",
+                        "@user_id": "%(user_id)s",
                         "@xmlns": "http://commcarehq.org/case/transaction/v2",
                         "update": {
                             "due_list_max_expires": "18041",
@@ -319,7 +319,7 @@
             "case": {
                 "@case_id": "%(pregnant_ccs_record_case_id)s",
                 "@date_modified": "2018-11-22T07:52:22.060000Z",
-                "@user_id": "a945d8c900b14a609e8c6463d70bb2d9",
+                "@user_id": "%(user_id)s",
                 "@xmlns": "http://commcarehq.org/case/transaction/v2",
                 "update": {
                     "anemia": "normal",
@@ -356,7 +356,7 @@
                     "case": {
                         "@case_id": "c64daecf-96fc-426a-a98f-e5369c8d772e",
                         "@date_modified": "2018-11-22T07:52:22.060000Z",
-                        "@user_id": "a945d8c900b14a609e8c6463d70bb2d9",
+                        "@user_id": "%(user_id)s",
                         "@xmlns": "http://commcarehq.org/case/transaction/v2",
                         "update": {
                             "blood_group": "ab_pos",
@@ -453,6 +453,6 @@
     "submit_ip": "203.100.67.204",
     "time_end": null,
     "time_start": null,
-    "user_id": "a945d8c900b14a609e8c6463d70bb2d9",
+    "user_id": "%(user_id)s",
     "xmlns": "http://openrosa.org/formdesigner/2864010F-B1B1-4711-8C59-D5B2B81D65DB"
 }
