@@ -30,26 +30,23 @@ def get_next_uuid(randomObj):
 
 
 def get_nextInt(randomObj):
-    return int(randomObj.random() * 10)
+    return randomObj.randint(0, 10)
 
 
 def get_next_activity(randomObj):
-    return randomObj.sample(ACTIVITY_LIST, int(randomObj.random() * len(ACTIVITY_LIST)))
+    return randomObj.sample(ACTIVITY_LIST, randomObj.randint(0, len(ACTIVITY_LIST) - 1))
 
 
 def get_next_meal_served(randomObj):
-    return randomObj.sample(MEAL_SERVED_LIST, int(randomObj.random() * len(MEAL_SERVED_LIST)))
+    return randomObj.sample(MEAL_SERVED_LIST, randomObj.randint(0, len(MEAL_SERVED_LIST) - 1))
 
 
 def get_next_yes_no(randomObj):
-    if randomObj.random() < .5:
-        return "yes"
-    else:
-        return "no"
+    return randomObj.choice(["yes", "no"])
 
 
 def get_int(randomObj):
-    return int(MAX_VALUE * randomObj.random())
+    return randomObj.randint(0, MAX_VALUE)
 
 
 def get_decimal(randomObj):
@@ -57,15 +54,15 @@ def get_decimal(randomObj):
 
 
 def get_anemia_state(randomObj):
-    return ANEMIA_STATES[int(randomObj.random() * 4)]
+    return ANEMIA_STATES[randomObj.randint(0, len(ANEMIA_STATES) - 1)]
 
 
 def get_anc_blood_pressure_state(randomObj):
-    return ANC_BLOOD_PRESSURE_STATES[int(randomObj.random() * 4)]
+    return ANC_BLOOD_PRESSURE_STATES[randomObj.randint(0, len(ANC_BLOOD_PRESSURE_STATES) - 1)]
 
 
 def get_next_child_birth_location(randomObj):
-    return CHILD_BIRTH_LOCATIONS[int(randomObj.random() * 2)]
+    return CHILD_BIRTH_LOCATIONS[randomObj.randint(0, len(CHILD_BIRTH_LOCATIONS) - 1)]
 
 
 def get_next_child_id(randomObj):
@@ -121,7 +118,7 @@ def get_next_zscore(randomObj):
 
 
 def get_next_age_days(randomObj):
-    return int(randomObj.random() * 1000)
+    return randomObj.randint(0, 999)
 
 
 def get_next_sex(randomObj):
@@ -151,15 +148,12 @@ def get_next_phone_number(random_instance):
 
 
 def get_next_bool_value(randomObj):
-    if randomObj.random() < .5:
-        return True
-    else:
-        return False
+    return randomObj.choice([True, False])
 
 
 def get_random_migration_status(randomObj):
-    return MIGRATION_STATUS[int(randomObj.random() * 2)]
+    return MIGRATION_STATUS[randomObj.randint(0, len(MIGRATION_STATUS) - 1)]
 
 
 def get_random_delivery_nature(randomObj):
-    return DELIVERY_NATURES[int(randomObj.random() * 4)]
+    return DELIVERY_NATURES[randomObj.randint(0, len(DELIVERY_NATURES) - 1)]
