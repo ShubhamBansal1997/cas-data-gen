@@ -1,7 +1,6 @@
 import json
-import datetime
 
-from data_gen.data.randomizers import get_next_uuid, get_next_yes_no, get_next_datetime_modified
+from data_gen.data.randomizers import get_next_uuid, get_next_yes_no
 from data_gen.data.util import get_template
 
 
@@ -11,10 +10,8 @@ def get_random_pnc_form(seed_values):
 
 
 def randomize_template_values(template_string, seed_values):
-    random_generator = seed_values.random_instance
-    datetime_modified_datetime = get_next_datetime_modified(random_generator)
     form_context = {
-        'submission_time': datetime.datetime.strftime(datetime_modified_datetime, "%Y-%m-%d"),
+        'submission_time': seed_values.context['pnc1_date'],
         'form_id': get_next_uuid(seed_values.random_instance),
         'random_yes_no': get_next_yes_no(seed_values.random_instance)
     }
