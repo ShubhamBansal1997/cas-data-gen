@@ -70,3 +70,5 @@ Description         | Form Type  | Form ID
 ------------------- | ---------- | -------
 Birth Preparedness  | BP         | [4623a1a0-8182-4764-8be1-5f7a7ebb31b1](https://india.commcarehq.org/a/icds-dashboard-qa/reports/form_data/4623a1a0-8182-4764-8be1-5f7a7ebb31b1/#form-xml)
 Post Natal Care     | PNC 			 | [c28f99cb-e706-4e28-a245-60147a1f692d](https://india.commcarehq.org/a/icds-cas/reports/form_data/c28f99cb-e706-4e28-a245-60147a1f692d/#form-xml)
+Take Home Ration		| THR				 | [5cbb6dcb-89de-4da2-a3b1-5237f4dd3182]https://india.commcarehq.org/a/icds-cas/reports/form_data/5cbb6dcb-89de-4da2-a3b1-5237f4dd3182/#form-data
+Delivery Form 			| Delivery	 | [a684eab2-db48-4ffa-9cdb-8ade3e36ff8b]https://india.commcarehq.org/a/icds-cas/reports/form_data/a684eab2-db48-4ffa-9cdb-8ade3e36ff8b/
