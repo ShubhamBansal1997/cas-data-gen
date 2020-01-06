@@ -26,17 +26,32 @@ class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_
     @property
     def context(self):
         if not hasattr(self, '_context'):
+            # edd - estimate delivery date
+            # add - actual delivery date
+            # as of now we are assuming add to be 1 day ahead of
+            # edd
+            # basis of bp_dates, delivery_dates and pnc_dates
+            # are based on the add and edd
+            # https://confluence.dimagi.com/pages/viewpage.action?spaceKey=ICDS&title=Home+Visit+Scheduler+Details
             edd = randomizers.get_next_edd(self.random_instance)
             lmp = edd - timedelta(days=280)  # 280 = gestational age
-            bp1_date = lmp + timedelta(days=90)
-            bp2_date = lmp + timedelta(days=180)
-            bp3_date = lmp + timedelta(days=230)
+
+            bp1_date = edd - timedelta(days=270)
+            bp2_date = edd - timedelta(days=75)
+            bp3_date = edd - timedelta(days=45)
+            add = edd + timedelta(days=1)
             modified_date = datetime.now()
             # Need to be fix
             # As of now it will take a random date from the next 360 days as per the lmp
             random_date = lmp + timedelta(days=randomizers.get_nextInt(self.random_instance) * 36)
             opened_on = lmp - timedelta(days=10)
-            pnc1_date = lmp + timedelta(days=300)
+            pnc1_date = add + timedelta(days=1)
+            anc1_date = edd - timedelta(days=274)
+            anc2_date = max([anc1_date + timedelta(days=30), edd - timedelta(days=274)])
+            anc3_date = max([anc2_date + timedelta(days=30), edd - timedelta(days=274)])
+            anc4_date = max([anc3_date + timedelta(days=30), edd - timedelta(days=91)])
+            thr_date = add + timedelta(days=randomizers.get_nextInt(self.random_instance) * 120)
+            next_visit_date_delivery = add + timedelta(days=randomizers.get_nextInt(self.random_instance))
             # server_modified_on is actually the latest datetime when the case
             # is updated for raw data we are assuming this to be bp3_date
             self._context = {
@@ -64,6 +79,11 @@ class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_
                 'bp2_date': datetime_to_string(bp2_date),
                 'bp3_date': datetime_to_string(bp3_date),
                 'pnc1_date': datetime_to_string(pnc1_date),
+                'anc1_date': datetime_to_string(anc1_date),
+                'anc2_date': datetime_to_string(anc2_date),
+                'anc3_date': datetime_to_string(anc3_date),
+                'anc4_date': datetime_to_string(anc4_date),
+                'thr_date': datetime_to_string(thr_date),
                 'child_birth_location': randomizers.get_next_child_birth_location(self.random_instance),
                 'preg_order': randomizers.get_nextInt(self.random_instance),
                 'date_death': random_date.strftime(randomizers.DATE_FORMAT_STRING),
@@ -74,7 +94,8 @@ class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_
                 'random_yes_no': randomizers.get_next_yes_no(self.random_instance),
                 'closed': randomizers.get_next_bool_value(self.random_instance),
                 'migration_status': randomizers.get_random_migration_status(self.random_instance),
-                'delivery_nature': randomizers.get_random_delivery_nature(self.random_instance)
+                'delivery_nature': randomizers.get_random_delivery_nature(self.random_instance),
+                'next_visit_date_delivery': datetime_to_string(next_visit_date_delivery)
             }
         return self._context
 
