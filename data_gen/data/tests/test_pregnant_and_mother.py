@@ -28,7 +28,7 @@ class TestPregnantAndMother(DataGenTestBase):
     def test_pregnant_types(self):
         data_generator = self._get_random_pregnant_data_generator()
         data = list(data_generator.get_data())
-        self.assertEqual(8, len(data))
+        self.assertEqual(10, len(data))
 
     def test_mother_types(self):
         while True:
