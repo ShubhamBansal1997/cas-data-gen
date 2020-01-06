@@ -18,9 +18,11 @@ CASE_LIST = []
 ANEMIA_STATES = ["", "severe", "moderate", "normal"]
 MAX_VALUE = 32767
 ANC_BLOOD_PRESSURE_STATES = ["", "normal", "high", "not_measured"]
-CHILD_BIRTH_LOCATIONS = ["hospital", "home"]
+CHILD_BIRTH_LOCATIONS = ["", "transit", "hospital", "home"]
 MIGRATION_STATUS = ["migrated", ""]
 DELIVERY_NATURES = ["", "vaginal", "caesarean", "instrumental"]
+STILL_LIVE_CASES = ["live", "still"]
+
 
 # Functions to get specific variables within templates
 
@@ -157,3 +159,7 @@ def get_random_migration_status(randomObj):
 
 def get_random_delivery_nature(randomObj):
     return DELIVERY_NATURES[randomObj.randint(0, len(DELIVERY_NATURES) - 1)]
+
+
+def get_still_live_cases(randomObj):
+    return STILL_LIVE_CASES[randomObj.randint(0, len(STILL_LIVE_CASES) - 1)]

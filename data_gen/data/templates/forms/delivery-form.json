@@ -1,0 +1,383 @@
+{
+    "app_id": "62a3e97f4b8e5d11977d44160865121b",
+    "app_version": null,
+    "auth_context": {
+        "authenticated": true,
+        "doc_type": "AuthContext",
+        "domain": "icds-cas",
+        "user_id": "%(user_id)s"
+    },
+    "build_id": "1d18c7784ae549f4a16a11412bbeeca6",
+    "commcare_version": null,
+    "date_header": null,
+    "deprecated_form_id": null,
+    "domain": "icds-cas",
+    "edited_on": null,
+    "external_blobs": {
+        "form.xml": {
+            "content_length": 12857,
+            "content_type": "text/xml",
+            "id": "9badb084e73a4b389e8daeec0541acd9"
+        }
+    },
+    "form": {
+        "#type": "data",
+        "@name": "Delivery",
+        "@uiVersion": "1",
+        "@version": "31996",
+        "@xmlns": "http://openrosa.org/formdesigner/376FA2E1-6FD1-4C9E-ACB4-E046038CD5E2",
+        "add": "2019-12-24",
+        "app_scope": "cas",
+        "case_load_ccs_record0": {
+            "case": {
+                "@case_id": "%(pregnant_ccs_record_case_id)s",
+                "@date_modified": "2019-12-24T06:14:09.183000Z",
+                "@user_id": "ed16783aa2f041078d98ea83b15e2525",
+                "@xmlns": "http://commcarehq.org/case/transaction/v2",
+                "update": {
+                    "add": "2019-12-24",
+                    "child_birth_location": "home",
+                    "complication_type": "",
+                    "complications": "no",
+                    "current_schedule_phase": "2",
+                    "fp_at_delivery": "other",
+                    "last_visit_date_delivery": "2019-12-24T06:14:09.183000Z",
+                    "last_visit_number_delivery": "1",
+                    "mother_alive": "yes",
+                    "number_children_delivered": "1",
+                    "ppfp_adopted_check": "",
+                    "preterm_check": "full_term"
+                }
+            }
+        },
+        "case_person": {
+            "case": {
+                "@case_id": "73a4d3f3-a8b8-433b-a82d-65c146116a6a",
+                "@date_modified": "2019-12-24T06:14:09.183000Z",
+                "@user_id": "ed16783aa2f041078d98ea83b15e2525",
+                "@xmlns": "http://commcarehq.org/case/transaction/v2",
+                "update": {
+                    "is_pregnant": "",
+                    "last_preg_tt": "no"
+                }
+            }
+        },
+        "check_schedule": "OK",
+        "child": {
+            "L_wfa": "0.3487",
+            "M_wfa": "3.3464",
+            "S_wfa": "0.14602",
+            "abnormalities": "",
+            "add_vaccinations": "no",
+            "age_in_days": "0",
+            "age_in_months": "0",
+            "age_in_weeks": "0",
+            "age_months_rounded": "0",
+            "age_weeks_rounded": "0",
+            "birth_weight_grams_int": "50",
+            "birth_weight_kg": "2.05",
+            "birth_weight_kg_int": "2",
+            "breastfed_within_first_hour": "%(random_yes_no)s",
+            "calc_due_min_max": {
+                "@count": "36",
+                "@current_index": "0",
+                "@ids": "5145746cbe08f2d67dd7eb7000918267 5145746cbe08f2d67dd7eb7000918a9f 5145746cbe08f2d67dd7eb7000918dd0 5145746cbe08f2d67dd7eb700091991b 5145746cbe08f2d67dd7eb700091a2c0 5145746cbe08f2d67dd7eb700091a755 5145746cbe08f2d67dd7eb700091b513 5145746cbe08f2d67dd7eb700091bf0f 5145746cbe08f2d67dd7eb700091ccaa 5145746cbe08f2d67dd7eb700091da6e 5145746cbe08f2d67dd7eb700091df43 5145746cbe08f2d67dd7eb700091e1de 5145746cbe08f2d67dd7eb700091e49d 5145746cbe08f2d67dd7eb700091f43a 5145746cbe08f2d67dd7eb700091fae0 5145746cbe08f2d67dd7eb7000920345 5145746cbe08f2d67dd7eb7000920ed2 5145746cbe08f2d67dd7eb7000922e46 5145746cbe08f2d67dd7eb7000923903 5145746cbe08f2d67dd7eb7000924fb2 5145746cbe08f2d67dd7eb7000925a6f 5145746cbe08f2d67dd7eb7000926114 5145746cbe08f2d67dd7eb700092633d 5145746cbe08f2d67dd7eb7000926393 5145746cbe08f2d67dd7eb7000926a56 5145746cbe08f2d67dd7eb7000926e94 5145746cbe08f2d67dd7eb700092763e 5145746cbe08f2d67dd7eb700092829c 5145746cbe08f2d67dd7eb7000928e92 5145746cbe08f2d67dd7eb7000929966 5145746cbe08f2d67dd7eb700092a8de 5145746cbe08f2d67dd7eb700092abbd 5145746cbe08f2d67dd7eb700092c6a2 5145746cbe08f2d67dd7eb700092cd9c 5145746cbe08f2d67dd7eb700092da39 5145746cbe08f2d67dd7eb700092dd8f"
+            },
+            "case_open_child_health_3": {
+                "case": {
+                    "@case_id": "bf816e4b-ad4a-4a69-82dc-bdc9ad58a9be",
+                    "@date_modified": "2019-12-24T06:14:09.183000Z",
+                    "@user_id": "ed16783aa2f041078d98ea83b15e2525",
+                    "@xmlns": "http://commcarehq.org/case/transaction/v2",
+                    "create": {
+                        "case_name": "child_health",
+                        "case_type": "child_health",
+                        "owner_id": "-"
+                    },
+                    "index": {
+                        "parent": {
+                            "#text": "4e0755c9-03d3-42e3-a309-3bec09b39b79",
+                            "@case_type": "person",
+                            "@relationship": "extension"
+                        }
+                    },
+                    "update": {
+                        "abnormalities": "",
+                        "birth_weight": "2.05",
+                        "breastfed_within_first": "",
+                        "cord_applied": "",
+                        "cord_cut": "",
+                        "cord_tied": "",
+                        "count": "1",
+                        "display_icon_z1": "red",
+                        "last_date_gmp": "2019-12-24",
+                        "low_birth_weight": "yes",
+                        "owner_id": "389b7a3e5e784c44b5168780a7c96c94",
+                        "preterm_check": "full_term",
+                        "skin_care": "",
+                        "weight_child": "2.05",
+                        "wfa_nutrition_status": "Severe",
+                        "wrapped_dried": "",
+                        "zscore1": "-3.08",
+                        "zscore_grading_wfa": "red"
+                    }
+                }
+            },
+            "case_open_measurement_1": {
+                "case": {
+                    "@case_id": "340b9f47-5775-4cd3-91f4-98df369df276",
+                    "@date_modified": "2019-12-24T06:14:09.183000Z",
+                    "@user_id": "ed16783aa2f041078d98ea83b15e2525",
+                    "@xmlns": "http://commcarehq.org/case/transaction/v2",
+                    "create": {
+                        "case_name": "measurement",
+                        "case_type": "measurement",
+                        "owner_id": "-"
+                    },
+                    "index": {
+                        "parent": {
+                            "#text": "bf816e4b-ad4a-4a69-82dc-bdc9ad58a9be",
+                            "@case_type": "child_health",
+                            "@relationship": "extension"
+                        }
+                    },
+                    "update": {
+                        "age_in_months": "0",
+                        "owner_id": "389b7a3e5e784c44b5168780a7c96c94",
+                        "weight_child": "2.05"
+                    }
+                }
+            },
+            "case_open_person_1": {
+                "case": {
+                    "@case_id": "4e0755c9-03d3-42e3-a309-3bec09b39b79",
+                    "@date_modified": "2019-12-24T06:14:09.183000Z",
+                    "@user_id": "ed16783aa2f041078d98ea83b15e2525",
+                    "@xmlns": "http://commcarehq.org/case/transaction/v2",
+                    "create": {
+                        "case_name": "juan",
+                        "case_type": "person",
+                        "owner_id": "ed16783aa2f041078d98ea83b15e2525"
+                    },
+                    "index": {
+                        "mother": {
+                            "#text": "73a4d3f3-a8b8-433b-a82d-65c146116a6a",
+                            "@case_type": "person"
+                        },
+                        "parent": {
+                            "#text": "13a52c0d-eab1-4c57-9f74-c32c0fe640a8",
+                            "@case_type": "household",
+                            "@relationship": "child"
+                        }
+                    },
+                    "update": {
+                        "dob": "2019-12-24",
+                        "owner_id": "389b7a3e5e784c44b5168780a7c96c94",
+                        "resident": "no",
+                        "sex": "M",
+                        "time_birth": "11:43:00.000+05:30"
+                    }
+                }
+            },
+            "case_open_tasks_3": {
+                "case": {
+                    "@case_id": "46373068-c943-4cc2-add8-7e2b4efce62c",
+                    "@date_modified": "2019-12-24T06:14:09.183000Z",
+                    "@user_id": "ed16783aa2f041078d98ea83b15e2525",
+                    "@xmlns": "http://commcarehq.org/case/transaction/v2",
+                    "create": {
+                        "case_name": "tasks",
+                        "case_type": "tasks",
+                        "owner_id": "-"
+                    },
+                    "index": {
+                        "parent": {
+                            "#text": "bf816e4b-ad4a-4a69-82dc-bdc9ad58a9be",
+                            "@case_type": "child_health",
+                            "@relationship": "extension"
+                        }
+                    },
+                    "update": {
+                        "due_list_max_expires": "20446",
+                        "due_list_min_eligible": "18254",
+                        "owner_id": "389b7a3e5e784c44b5168780a7c96c94",
+                        "schedule_flag": "dpt_hepb",
+                        "tasks_type": "child"
+                    }
+                }
+            },
+            "check_test": "0",
+            "child_birth_weight_recorded": "yes",
+            "child_cried": "yes",
+            "child_current_name": "juan",
+            "child_died_check": "0",
+            "child_have_a_name": "yes",
+            "child_health_case_name": "child_health",
+            "child_name": "juan",
+            "child_temp_name_final": "Maa 's son",
+            "child_temp_name_single": "Maa 's son",
+            "cord_applied": "",
+            "cord_cut": "",
+            "cord_tied": "",
+            "count": "1",
+            "date_first_weight": "2019-12-24",
+            "display_child_weight": "OK",
+            "display_icon_z1": "red",
+            "dob": "2019-12-24",
+            "due_list_max_expires": "20446",
+            "due_list_min_eligible": "18254",
+            "iteration": {
+                "@count": "36",
+                "@current_index": "0",
+                "@ids": "5145746cbe08f2d67dd7eb7000918267 5145746cbe08f2d67dd7eb7000918a9f 5145746cbe08f2d67dd7eb7000918dd0 5145746cbe08f2d67dd7eb700091991b 5145746cbe08f2d67dd7eb700091a2c0 5145746cbe08f2d67dd7eb700091a755 5145746cbe08f2d67dd7eb700091b513 5145746cbe08f2d67dd7eb700091bf0f 5145746cbe08f2d67dd7eb700091ccaa 5145746cbe08f2d67dd7eb700091da6e 5145746cbe08f2d67dd7eb700091df43 5145746cbe08f2d67dd7eb700091e1de 5145746cbe08f2d67dd7eb700091e49d 5145746cbe08f2d67dd7eb700091f43a 5145746cbe08f2d67dd7eb700091fae0 5145746cbe08f2d67dd7eb7000920345 5145746cbe08f2d67dd7eb7000920ed2 5145746cbe08f2d67dd7eb7000922e46 5145746cbe08f2d67dd7eb7000923903 5145746cbe08f2d67dd7eb7000924fb2 5145746cbe08f2d67dd7eb7000925a6f 5145746cbe08f2d67dd7eb7000926114 5145746cbe08f2d67dd7eb700092633d 5145746cbe08f2d67dd7eb7000926393 5145746cbe08f2d67dd7eb7000926a56 5145746cbe08f2d67dd7eb7000926e94 5145746cbe08f2d67dd7eb700092763e 5145746cbe08f2d67dd7eb700092829c 5145746cbe08f2d67dd7eb7000928e92 5145746cbe08f2d67dd7eb7000929966 5145746cbe08f2d67dd7eb700092a8de 5145746cbe08f2d67dd7eb700092abbd 5145746cbe08f2d67dd7eb700092c6a2 5145746cbe08f2d67dd7eb700092cd9c 5145746cbe08f2d67dd7eb700092da39 5145746cbe08f2d67dd7eb700092dd8f"
+            },
+            "low_birth_weight": "yes",
+            "mean_wfa": "3.3464",
+            "measurement_case_name": "measurement",
+            "message_child": "OK",
+            "nutritional_status_group": {
+                "WFA_status_val": "Severe"
+            },
+            "open_child_case": "yes",
+            "position": "0",
+            "position_num": "1",
+            "schedule_flag": "dpt_hepb",
+            "sd2neg_wfa": "2.4593124390190946",
+            "sd2pos_wfa": "4.419353800695619",
+            "sd3neg_wfa": "2.0803078131632184",
+            "sd3pos_wfa": "5.0306392513813405",
+            "sex": "M",
+            "skin_care": "",
+            "still_live_birth": "%(still_live_birth)s",
+            "tasks_case_name": "tasks",
+            "tasks_type": "child",
+            "time_birth": "11:43:00.000+05:30",
+            "weight_calculated": "yes",
+            "wrapped_dried": "",
+            "z_score_wfa_ql": {
+                "show_red_label": "OK"
+            },
+            "zscore1": "-3.08",
+            "zscore_grading_wfa": "red",
+            "zscore_unrounded_wfa": "-3.079966868728256",
+            "zscore_wfa": "-3.08",
+            "zscore_wfa_change_status": "no_prev",
+            "zscore_wfa_image_path": "jr://file/commcare/image/data/red_no_prev.png"
+        },
+        "close_ccs_record": "no",
+        "close_ccsrecord_task_case": {
+            "close_ccsrecord_task_case": {
+                "case": {
+                    "@case_id": "246959ad-db41-4cce-86d3-9e8acedebfea",
+                    "@date_modified": "2019-12-24T06:14:09.183000Z",
+                    "@user_id": "ed16783aa2f041078d98ea83b15e2525",
+                    "@xmlns": "http://commcarehq.org/case/transaction/v2",
+                    "close": ""
+                }
+            }
+        },
+        "complication_type": "",
+        "complications": "no",
+        "confirm_one_child": "yes",
+        "current_visit_number": "1",
+        "date_notified": "2019-12-24",
+        "days_visit_late": "%(days_visit_late)s",
+        "del1_date": "2019-12-24",
+        "edd": "2019-12-30",
+        "fp_at_delivery": "other",
+        "gps_location": "",
+        "has_delivered": "yes",
+        "how_many_children": "1",
+        "ifa_tablets_given": "",
+        "is_pregnant": "",
+        "kit_or_clean": "",
+        "meta": {
+            "@xmlns": "http://openrosa.org/jr/xforms",
+            "appVersion": {
+                "#text": "CommCare Android, version \"2.47.4\"(459158). App v31996. CommCare Version 2.47. Build 459158, built on: 2019-09-28",
+                "@xmlns": "http://commcarehq.org/xforms"
+            },
+            "deviceID": "869430041135632",
+            "drift": "-23",
+            "instanceID": "a684eab2-db48-4ffa-9cdb-8ade3e36ff8b",
+            "location": {
+                "@xmlns": "http://commcarehq.org/xforms"
+            },
+            "timeEnd": "%(submission_time)s",
+            "timeStart": "2019-12-24T06:13:23.082000Z",
+            "userID": "ed16783aa2f041078d98ea83b15e2525",
+            "username": "sankalp.aww.test"
+        },
+        "month_reported": "12",
+        "mother_alive": "yes",
+        "mother_close": "no",
+        "mother_dead": "no",
+        "mother_dob": "1996-09-20",
+        "mother_name": "Maa",
+        "mother_resident_status": "no",
+        "name_local_transport": "",
+        "name_private_hospital": "",
+        "name_public_hospital": "",
+        "next_bp": "18215",
+        "next_delivery": "18253",
+        "next_due": "2019-11-15",
+        "next_visit_date": "%(next_visit_date_delivery)s",
+        "num_children_del": "%(num_children_del)s",
+        "open_action_removal": "no",
+        "owner_id": "389b7a3e5e784c44b5168780a7c96c94",
+        "phone_number_ambulance": "",
+        "phone_number_local_transport": "",
+        "phone_number_private_hospital": "",
+        "phone_number_public_hospital": "",
+        "post_postpartum_fp": "",
+        "preg_tt_for_next_pregnancy": "no",
+        "pregnancy_tasks_case_id": "246959ad-db41-4cce-86d3-9e8acedebfea",
+        "preterm_check": "full_term",
+        "prev_referral_status": "",
+        "referral_status": "",
+        "relationship_type": "child",
+        "safe": "yes",
+        "success": "OK",
+        "time_notified": "11:43:00.000+05:30",
+        "total_children_died": "0",
+        "unscheduled_visit": "%(unscheduled_visit)s",
+        "update_mother_person_case": {
+            "update_mother_person_case": {
+                "case": {
+                    "@case_id": "73a4d3f3-a8b8-433b-a82d-65c146116a6a",
+                    "@date_modified": "2019-12-24T06:14:09.183000Z",
+                    "@user_id": "ed16783aa2f041078d98ea83b15e2525",
+                    "@xmlns": "http://commcarehq.org/case/transaction/v2",
+                    "update": {
+                        "died": "no",
+                        "is_pregnant": ""
+                    }
+                }
+            }
+        },
+        "user_role": "",
+        "washed_hands": "",
+        "where_born": "%(child_birth_location)s",
+        "which_village": "",
+        "who_assisted": ""
+    },
+    "form_id": "%(form_id)s",
+    "history": [],
+    "id": 920561,
+    "initial_processing_complete": true,
+    "last_sync_token": "50db4b4826dd11ea90e102b800f8fb48",
+    "openrosa_headers": {
+        "HTTP_X_OPENROSA_VERSION": "3.0"
+    },
+    "orig_id": null,
+    "partial_submission": false,
+    "problem": null,
+    "received_on": "%(submission_time)s",
+    "server_modified_on": "2019-12-25T06:14:10.687618Z",
+    "state": "normal",
+    "submit_ip": "106.198.170.236",
+    "time_end": null,
+    "time_start": null,
+    "user_id": "%(user_id)s",
+    "xmlns": "http://openrosa.org/formdesigner/376FA2E1-6FD1-4C9E-ACB4-E046038CD5E2"
+}

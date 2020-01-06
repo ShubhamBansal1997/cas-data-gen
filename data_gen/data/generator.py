@@ -3,6 +3,8 @@ from datetime import timedelta
 
 from data_gen.data.birth_preparedness import get_random_bp_form
 from data_gen.data.post_natal_care import get_random_pnc_form
+from data_gen.data.take_home_ration import get_random_thr_form
+from data_gen.data.delivery import get_random_delivery_form
 from ..kafka.meta import get_form_meta, get_case_meta
 from ..kafka import topics
 from ..kafka.producer import ChangeProducer
@@ -68,6 +70,8 @@ class DataGenerator:
             for i in range(3):
                 yield DataUnit(topics.FORM_TOPIC, get_form_meta(self.get_bp_form(i + 1)))
             yield DataUnit(topics.FORM_TOPIC, get_form_meta(self.get_pnc_form()))
+            yield DataUnit(topics.FORM_TOPIC, get_form_meta(self.get_thr_form()))
+            yield DataUnit(topics.FORM_TOPIC, get_form_meta(self.get_delivery_form()))
 
         else:
             yield DataUnit(topics.CASE_TOPIC, get_case_meta(self.get_mother_case()))
@@ -126,3 +130,9 @@ class DataGenerator:
 
     def get_pnc_form(self):
         return get_random_pnc_form(self.seed_values)
+
+    def get_thr_form(self):
+        return get_random_thr_form(self.seed_values)
+
+    def get_delivery_form(self):
+        return get_random_delivery_form(self.seed_values)
