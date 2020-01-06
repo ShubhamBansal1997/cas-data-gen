@@ -28,8 +28,7 @@ class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_
         if not hasattr(self, '_context'):
             # edd - estimate delivery date
             # add - actual delivery date
-            # as of now we are assuming add to be 1 day ahead of
-            # edd
+            # as of now we are assuming add to be 1 day after edd
             # basis of bp_dates, delivery_dates and pnc_dates
             # are based on the add and edd
             # https://confluence.dimagi.com/pages/viewpage.action?spaceKey=ICDS&title=Home+Visit+Scheduler+Details
