@@ -23,6 +23,7 @@ MIGRATION_STATUS = ["migrated", ""]
 DELIVERY_NATURES = ["", "vaginal", "caesarean", "instrumental"]
 STILL_LIVE_CASES = ["live", "still"]
 CASTES = ["st", "sc", "other"]
+REGISTER_STATUS = ["not_registered", ""]
 
 
 # Functions to get specific variables within templates
@@ -168,3 +169,7 @@ def get_still_live_cases(randomObj):
 
 def get_caste(randomObj):
     return CASTES[randomObj.randint(0, len(STILL_LIVE_CASES) - 1)]
+
+
+def get_registered_status(randomObj):
+    return REGISTER_STATUS[randomObj.randint(0, len(REGISTER_STATUS) - 1)]

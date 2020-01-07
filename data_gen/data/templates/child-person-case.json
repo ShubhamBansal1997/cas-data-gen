@@ -23,6 +23,7 @@
         "marital_status": "",
         "mcts_id": "",
         "migration_status": "%(migration_status)s",
+        "registered_status": "%(registered_status)s",
         "mother_name": "%(mother_name)s",
         "phone_number": "",
         "raw_aadhar_string": "",

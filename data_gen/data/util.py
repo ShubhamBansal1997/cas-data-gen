@@ -95,7 +95,8 @@ class SeedValues(namedtuple('SeedValues', ['random_instance', 'location', 'case_
                 'migration_status': randomizers.get_random_migration_status(self.random_instance),
                 'delivery_nature': randomizers.get_random_delivery_nature(self.random_instance),
                 'next_visit_date_delivery': datetime_to_string(next_visit_date_delivery),
-                'caste': randomizers.get_caste(self.random_instance)
+                'caste': randomizers.get_caste(self.random_instance),
+                'registered_status': randomizers.get_registered_status(self.random_instance)
             }
         return self._context
 
