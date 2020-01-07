@@ -23,7 +23,6 @@ MIGRATION_STATUS = ["migrated", ""]
 DELIVERY_NATURES = ["", "vaginal", "caesarean", "instrumental"]
 STILL_LIVE_CASES = ["live", "still"]
 CASTES = ["st", "sc", "other"]
-REGISTER_STATUS = ["not_registered", ""]
 
 
 # Functions to get specific variables within templates
@@ -126,7 +125,7 @@ def get_next_age_days(randomObj):
 
 
 def get_next_sex(randomObj):
-    return "M" if randomObj.random() < 0.5 else "F"
+    return randomObj.choice(["M", "F"])
 
 
 def get_next_location_dict(locationCycle):
@@ -168,8 +167,8 @@ def get_still_live_cases(randomObj):
 
 
 def get_caste(randomObj):
-    return CASTES[randomObj.randint(0, len(STILL_LIVE_CASES) - 1)]
+    return CASTES[randomObj.randint(0, len(CASTES) - 1)]
 
 
 def get_registered_status(randomObj):
-    return REGISTER_STATUS[randomObj.randint(0, len(REGISTER_STATUS) - 1)]
+    return randomObj.choice(["not_registered", ""])
