@@ -22,6 +22,7 @@ CHILD_BIRTH_LOCATIONS = ["", "transit", "hospital", "home"]
 MIGRATION_STATUS = ["migrated", ""]
 DELIVERY_NATURES = ["", "vaginal", "caesarean", "instrumental"]
 STILL_LIVE_CASES = ["live", "still"]
+CASTES = ["st", "sc", "other"]
 
 
 # Functions to get specific variables within templates
@@ -163,3 +164,7 @@ def get_random_delivery_nature(randomObj):
 
 def get_still_live_cases(randomObj):
     return STILL_LIVE_CASES[randomObj.randint(0, len(STILL_LIVE_CASES) - 1)]
+
+
+def get_caste(randomObj):
+    return CASTES[randomObj.randint(0, len(STILL_LIVE_CASES) - 1)]

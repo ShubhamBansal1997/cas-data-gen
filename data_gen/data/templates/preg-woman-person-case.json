@@ -13,7 +13,7 @@
         "contact_phone_number": "%(mother_phone_number)s",
         "contact_phone_number_is_verified": "",
         "disability_type": "",
-        "disabled": "no",
+        "disabled": "%(random_yes_no)s",
         "dob": "1993-07-23",
         "dob_known": "no",
         "father_name": "",
