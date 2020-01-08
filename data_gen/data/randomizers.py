@@ -57,15 +57,15 @@ def get_decimal(randomObj):
 
 
 def get_anemia_state(randomObj):
-    return ANEMIA_STATES[randomObj.randint(0, len(ANEMIA_STATES) - 1)]
+    return randomObj.choice(ANEMIA_STATES)
 
 
 def get_anc_blood_pressure_state(randomObj):
-    return ANC_BLOOD_PRESSURE_STATES[randomObj.randint(0, len(ANC_BLOOD_PRESSURE_STATES) - 1)]
+    return randomObj.choice(ANC_BLOOD_PRESSURE_STATES)
 
 
 def get_next_child_birth_location(randomObj):
-    return CHILD_BIRTH_LOCATIONS[randomObj.randint(0, len(CHILD_BIRTH_LOCATIONS) - 1)]
+    return randomObj.choice(CHILD_BIRTH_LOCATIONS)
 
 
 def get_next_child_id(randomObj):
@@ -155,19 +155,19 @@ def get_next_bool_value(randomObj):
 
 
 def get_random_migration_status(randomObj):
-    return MIGRATION_STATUS[randomObj.randint(0, len(MIGRATION_STATUS) - 1)]
+    return randomObj.choice(MIGRATION_STATUS)
 
 
 def get_random_delivery_nature(randomObj):
-    return DELIVERY_NATURES[randomObj.randint(0, len(DELIVERY_NATURES) - 1)]
+    return randomObj.choice(DELIVERY_NATURES)
 
 
 def get_still_live_cases(randomObj):
-    return STILL_LIVE_CASES[randomObj.randint(0, len(STILL_LIVE_CASES) - 1)]
+    return randomObj.choice(STILL_LIVE_CASES)
 
 
 def get_caste(randomObj):
-    return CASTES[randomObj.randint(0, len(CASTES) - 1)]
+    return randomObj.choice(CASTES)
 
 
 def get_registered_status(randomObj):
